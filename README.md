@@ -2,6 +2,8 @@
 
 Boilerplate for creating React component libraries. Built with [rollup](https://github.com/rollup/rollup) and includes [storybook](https://github.com/storybooks/storybook) and [emotion](https://github.com/emotion-js/emotion).
 
+![Storybook](storybook.png "Storybook screenshot")
+
 ## Getting Started
 
 1. `git clone --depth=1 https://github.com/madeagency/realib.git`
