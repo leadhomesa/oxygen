@@ -1,0 +1,15 @@
+[ignore]
+.*/node_modules/flow-bin/.*
+.*/build/.*
+
+[include]
+./flow-typed/
+
+[libs]
+
+[lints]
+
+[options]
+
+[version]
+0.69.0
