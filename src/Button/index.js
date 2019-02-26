@@ -1,15 +1,19 @@
-// @flow
-import styled from 'react-emotion'
+import ButtonPrimary from './button-primary';
+import ButtonSecondary from './button-secondary';
+import ButtonWhite from './button-white';
+import ButtonPill from './button-pill';
+import ButtonWarning from './button-warning';
+import ButtonOcean from './button-ocean';
+import ButtonDark from './button-dark';
+import LoadingIcon from './button-loading';
 
-import { body } from '../fonts'
-import { primary } from '../colours'
-
-export default styled('button')`
-  font-family: ${body};
-  appearance: none;
-  background-color: ${primary};
-  padding: 0.75rem 1.5rem;
-  cursor: pointer;
-  color: white;
-  font-size: 1.1rem;
-`
+export {
+  ButtonPrimary,
+  ButtonSecondary,
+  ButtonWhite,
+  ButtonPill,
+  ButtonWarning,
+  ButtonOcean,
+  ButtonDark,
+  LoadingIcon
+};
