@@ -2,6 +2,8 @@
 
 Leadhome atomic component library for React
 
+[![Storybook](https://leadhomesa.github.io/oxygen/)](https://leadhomesa.github.io/oxygen/)
+
 ## Install
 ```
  npm install @leadhome/oxygen
