@@ -9,7 +9,7 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduc
 License
 -------
 
-Carbon is © 2019 Leadhome Pty Ltd.
+Oxygen is © 2019 Leadhome Pty Ltd.
 It is free software, and may be redistributed under the terms specified in the [LICENSE](LICENSE.md) file.
 
 Maintained by
@@ -17,5 +17,5 @@ Maintained by
 
 [![logo](https://i.imgur.com/QH4yUje.png)](https://leadhome.co.za?utm_source=github)
 
-Carbon was created and is maintained by Leadhome Pty Ltd.<br />
+Oxygen was created and is maintained by Leadhome Pty Ltd.<br />
 The names and logos for Leadhome are trademarks of Leadhome Pty Ltd.
