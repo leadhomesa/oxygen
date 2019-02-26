@@ -1,4 +1,5 @@
 import { addDecorator, configure } from '@storybook/react';
+import { withInfo } from '@storybook/addon-info';
 import * as React from 'react';
 import GlobalStyle from '../src/global-style';
 
@@ -13,5 +14,6 @@ const withGlobal = (cb) => (
   </React.Fragment>
 );
 
+addDecorator(withInfo);
 addDecorator(withGlobal);
 configure(loadStories, module);

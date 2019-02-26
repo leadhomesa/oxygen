@@ -1,7 +1,7 @@
 {
-  "name": "oxygen",
-  "version": "0.1.0",
-  "description": "React component library",
+  "name": "@leadhome/oxygen",
+  "version": "0.0.1",
+  "description": "A react component library",
   "main": "build/realib.cjs.js",
   "module": "build/realib.esm.js",
   "browser": "build/realib.umd.js",
@@ -75,5 +75,8 @@
     "rollup-plugin-image": "^1.0.2",
     "rollup-plugin-react-svg": "^2.1.0",
     "styled-components": "^4.1.3"
+  },
+  "devDependencies": {
+    "@storybook/addon-info": "^4.1.13"
   }
 }
