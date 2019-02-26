@@ -1,4 +1,3 @@
-import styled from 'styled-components';
 import {
   ButtonPrimary,
   ButtonSecondary,
@@ -24,4 +23,3 @@ export default {
 
   Colors
 };
-
