@@ -1,7 +1,7 @@
 import resolve from 'rollup-plugin-node-resolve'
 import commonjs from 'rollup-plugin-commonjs'
 import babel from 'rollup-plugin-babel'
-import svg from 'rollup-plugin-svg';
+import reactSvg from "rollup-plugin-react-svg";
 
 import pkg from './package.json'
 
@@ -10,15 +10,14 @@ export default {
   external: ['styled-components'],
   globals: { 'styled-components': 'styled' },
   plugins: [
+    reactSvg(),
     babel({
-      exclude: 'node_modules/**',
-      plugins: ['external-helpers']
+      exclude: 'node_modules/**'
     }),
     resolve({
       jsnext: true
     }),
-    commonjs(),
-    svg()
+    commonjs()
   ],
   output: [
     {

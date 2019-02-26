@@ -1,60 +1,75 @@
 {
   "extends": [
-    "airbnb",
-    "plugin:flowtype/recommended",
-    "prettier",
-    "prettier/react",
-    "prettier/flowtype"
+    "standard",
+    "standard-react",
+    "plugin:prettier/recommended",
+    "plugin:react/recommended"
   ],
   "env": {
-    "es6": true,
     "browser": true,
     "node": true
   },
+  "parser": "babel-eslint",
+  "plugins": ["jsx-a11y", "import", "unicorn"],
   "rules": {
-    "global-require": "off",
-    "comma-dangle": "off",
-    "no-console": "off",
-    "no-underscore-dangle": "off",
-    "react/no-danger": "off",
-    "no-bitwise": "off",
-    "semi": [2, "never"],
-    "import/no-extraneous-dependencies": [
+    "jsx-quotes": ["error", "prefer-single"],
+    "semi": ["error", "always"],
+    "curly": ["error", "multi"],
+    "indent": ["error", 2],
+    "no-tabs": "off",
+    "space-before-function-paren": "off",
+    "prefer-arrow-callback": ["error"],
+    "camelcase": [
       "error",
       {
-        "devDependencies": ["webpack/**", "bin/*.dev.js"]
+        "properties": "always"
       }
     ],
-    "react/default-props-match-prop-types": "off", // https://github.com/yannickcr/eslint-plugin-react/issues/1468
-    "react/jsx-filename-extension": [
-      2,
-      {
-        "extensions": [".jsx", ".js"]
-      }
-    ],
-    "prettier/prettier": 2,
-    "no-restricted-globals": ["error", "event", "fdescribe"],
-    "jsx-a11y/anchor-is-valid": [
+    "no-multi-spaces": ["error"],
+    "react/display-name": 0,
+    "react/prefer-es6-class": ["error", "always"],
+    "react/prefer-stateless-function": "warn",
+    "react/jsx-pascal-case": "error",
+    "react/jsx-indent": ["error", 2],
+    "react/jsx-indent-props": ["error", 2],
+    "react/self-closing-comp": [
       "error",
       {
-        "components": ["Link"],
-        "specialLink": ["to"]
+        "component": true,
+        "html": true
+      }
+    ],
+    "react/jsx-closing-bracket-location": ["error", "tag-aligned"],
+    "react/jsx-wrap-multilines": [
+      "error",
+      {
+        "declaration": "parens-new-line",
+        "assignment": "parens-new-line",
+        "return": "parens-new-line",
+        "arrow": "parens-new-line",
+        "condition": "ignore",
+        "logical": "ignore",
+        "prop": "ignore"
+      }
+    ],
+    "react/jsx-boolean-value": ["error"],
+    "react/jsx-tag-spacing": [
+      "error",
+      {
+        "beforeSelfClosing": "always"
+      }
+    ],
+    "unicorn/filename-case": [
+      "error",
+      {
+        "case": "kebabCase"
       }
     ]
   },
-  "parser": "babel-eslint",
-  "plugins": ["flowtype", "react", "import", "prettier"],
-  "parserOptions": {
-    "ecmaVersion": 2016,
-    "sourceType": "module",
-    "ecmaFeatures": {
-      "jsx": true
-    }
-  },
   "settings": {
     "import/resolver": {
-      "flowtype": {
-        "onlyFilesWithFlowAnnotation": true
+      "node": {
+        "moduleDirectory": ["node_modules"]
       }
     }
   }

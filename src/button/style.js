@@ -29,7 +29,7 @@ export default styled.button`
   transition: all 0.1s ease-out;
   outline: none;
 
-  @media (hover: hover) {
+  @media (hover: hover) {disabl
     &:hover {
       bottom: 1px;
       box-shadow: 0 8px 8px -5px;

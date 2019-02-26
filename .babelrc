@@ -1,27 +1,13 @@
 {
   "presets": [
-    [
-      "env",
-      {
-        "modules": false,
-        "targets": {
-          "browsers": ["last 3 versions", "safari >= 7"]
-        }
-      }
-    ],
-    "react",
-    "stage-2",
-    "flow"
+    "@babel/preset-env",
+    "@babel/preset-react"
   ],
-  "env": {
-    "production": {
-      "only": [
-        "src"
-      ],
-      "plugins": [
-        "transform-react-constant-elements",
-        "transform-react-inline-elements"
-      ]
-    }
-  }
+  "plugins": [
+    "@babel/plugin-syntax-dynamic-import",
+    "babel-plugin-styled-components",
+    "@babel/plugin-proposal-optional-chaining",
+    "@babel/plugin-proposal-class-properties",
+    "transform-inline-environment-variables"
+  ]
 }
