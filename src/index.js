@@ -11,6 +11,9 @@ import {
 
 import Colors from './colors';
 
+import Input, { Currency as InputCurrency } from './input';
+import Dropdown from './dropdown';
+
 export default {
   ButtonPrimary,
   ButtonSecondary,
@@ -21,5 +24,10 @@ export default {
   ButtonDark,
   LoadingIcon,
 
-  Colors
+  Colors,
+
+  Input,
+  InputCurrency,
+
+  Dropdown
 };
