@@ -4,15 +4,15 @@ import Button from './style';
 import PropTypes from 'prop-types';
 
 Button.propTypes = {
-  /** Description of prop "size".
-   *
-   * Size of the button. Options are small, medium and large.
-   */
-  size: PropTypes.oneOf(['sm', 'md', 'lg'])
+  color: PropTypes.oneOf(['primary', 'secondary', 'warning', 'success']),
+  size: PropTypes.oneOf(['sm', 'md', 'lg']),
+  variant: PropTypes.oneOf(['flat', 'outlined', 'text'])
 };
 
 Button.defaultProps = {
-  size: 'md'
+  color: 'primary',
+  size: 'md',
+  variant: 'flat'
 };
 
 export default styled(Button)`
