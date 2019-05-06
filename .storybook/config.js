@@ -5,7 +5,7 @@ import * as React from 'react';
 import GlobalStyle from '../src/global-style';
 
 // automatically import all files ending in *.stories.js
-const req = require.context('../stories', true, /\.stories\.js$/);
+const req = require.context('../stories', true, /\.js$/);
 
 const loadStories = () => req.keys().forEach(filename => req(filename));
 
