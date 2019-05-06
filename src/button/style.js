@@ -42,6 +42,6 @@ export default styled.button`
   }
   
   ${({ disabled }) => disabled && Disabled};
-  ${({ sm }) => sm && SmallButton};
-  ${({ lg }) => lg && LargeButton};
+  ${({ size }) => size === 'sm' && SmallButton};
+  ${({ size }) => size === 'lg' && LargeButton};
 `;
