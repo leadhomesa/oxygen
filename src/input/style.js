@@ -50,7 +50,7 @@ const ContainerDisabled = css`
 export const Container = styled.div`
   border: ${({ noBorder }) => (noBorder ? 'none' : `1px solid ${colors.grey}`)};
   box-shadow: ${({ noShadow }) =>
-    noShadow ? 'none' : 'inset 0 2px 4px 0 rgba(65,65,96,0.15)'};
+    noShadow ? 'none' : 'inset 0 2px 4px 0 rgba(65,65,96,0.18)'};
   border-radius: 4px;
   display: flex;
 
