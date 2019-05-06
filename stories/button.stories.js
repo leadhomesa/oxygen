@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+import { boolean, select, text } from '@storybook/addon-knobs';
 import Button from '../src/button';
-import { boolean, select } from '@storybook/addon-knobs';
 
 const buttonSizes = {
   Small: 'sm',
@@ -16,12 +16,20 @@ const buttonColours = {
   Success: 'success'
 };
 
+const buttonVariants = {
+  Flat: 'flat',
+  Outlined: 'outlined',
+  Text: 'text'
+};
+
 storiesOf('Buttons', module).add('Button', () => (
   <Button
     color={select('Colour', buttonColours, 'primary')}
     disabled={boolean('Disabled', false)}
+    loading={boolean('Loading', false)}
     size={select('Size', buttonSizes, 'md')}
+    variant={select('Variant', buttonVariants, 'flat')}
   >
-    Hello Button
+    {text('Label', 'Hello Button')}
   </Button>
 ));
