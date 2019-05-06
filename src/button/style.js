@@ -67,11 +67,27 @@ export default styled.button`
   }
 
   ${({ disabled }) => disabled && Disabled};
-  ${({ size }) => size === 'sm' && SmallButton};
-  ${({ size }) => size === 'lg' && LargeButton};
 
-  ${({ color }) => color === 'primary' && PrimaryButton};
-  ${({ color }) => color === 'secondary' && SecondaryButton};
-  ${({ color }) => color === 'warning' && WarningButton};
-  ${({ color }) => color === 'success' && SuccessButton};
+  ${({ size }) => {
+    switch (size) {
+      case 'sm':
+        return SmallButton;
+      case 'lg':
+        return LargeButton;
+    }
+  }};
+
+  ${({ color }) => {
+    switch (color) {
+      case 'secondary':
+        return SecondaryButton;
+      case 'warning':
+        return WarningButton;
+      case 'success':
+        return SuccessButton;
+      case 'primary':
+      default:
+        return PrimaryButton;
+    }
+  }};
 `;
