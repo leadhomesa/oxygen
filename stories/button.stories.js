@@ -9,8 +9,16 @@ const buttonSizes = {
   Large: 'lg'
 };
 
+const buttonColours = {
+  Primary: 'primary',
+  Secondary: 'secondary',
+  Warning: 'warning',
+  Success: 'success'
+};
+
 storiesOf('Buttons', module).add('Button', () => (
   <Button
+    color={select('Colour', buttonColours, 'primary')}
     disabled={boolean('Disabled', false)}
     size={select('Size', buttonSizes, 'md')}
   >

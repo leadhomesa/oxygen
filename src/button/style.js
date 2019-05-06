@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import colors from '../colors';
 
 const Disabled = css`
   opacity: 0.5;
@@ -11,6 +12,30 @@ const SmallButton = css`
 
 const LargeButton = css`
   padding: 16px 20px 16px;
+`;
+
+const PrimaryButton = css`
+  color: ${colors.white};
+  background-color: ${colors.coral};
+  border: 1px solid ${colors.coral};
+`;
+
+const SecondaryButton = css`
+  color: ${colors.white};
+  background-color: ${colors.lighterStorm};
+  border: 1px solid ${colors.lighterStorm};
+`;
+
+const WarningButton = css`
+  color: ${colors.white};
+  background-color: ${colors.warning};
+  border: 1px solid ${colors.warning};
+`;
+
+const SuccessButton = css`
+  color: ${colors.white};
+  background-color: ${colors.ocean};
+  border: 1px solid ${colors.ocean};
 `;
 
 export default styled.button`
@@ -44,4 +69,9 @@ export default styled.button`
   ${({ disabled }) => disabled && Disabled};
   ${({ size }) => size === 'sm' && SmallButton};
   ${({ size }) => size === 'lg' && LargeButton};
+
+  ${({ color }) => color === 'primary' && PrimaryButton};
+  ${({ color }) => color === 'secondary' && SecondaryButton};
+  ${({ color }) => color === 'warning' && WarningButton};
+  ${({ color }) => color === 'success' && SuccessButton};
 `;
