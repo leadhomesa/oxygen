@@ -23,24 +23,24 @@ export default styled.button`
   padding: 11px 16px 10px;
   margin: 4px;
   font-size: 15px;
-  box-shadow: 0 7px 5px -5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 9px 7px 0 rgba(0, 0, 0, 0.06), 0 3px 4px 0 rgba(0, 0, 0, 0.15);
   position: relative;
   bottom: 0;
   transition: all 0.1s ease-out;
   outline: none;
 
-  @media (hover: hover) {disabl
+  @media (hover: hover) {
     &:hover {
       bottom: 1px;
-      box-shadow: 0 8px 8px -5px;
-        rgba(0, 0, 0, 0.12);
+      box-shadow: 0 11px 9px -1px rgba(0, 0, 0, 0.06),
+        0 5px 6px -1px rgba(0, 0, 0, 0.15);
     }
   }
-  
+
   & > svg {
     margin: -7px;
   }
-  
+
   ${({ disabled }) => disabled && Disabled};
   ${({ size }) => size === 'sm' && SmallButton};
   ${({ size }) => size === 'lg' && LargeButton};
