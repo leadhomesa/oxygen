@@ -5,9 +5,11 @@ import ButtonPill from './button-pill';
 import ButtonWarning from './button-warning';
 import ButtonOcean from './button-ocean';
 import ButtonDark from './button-dark';
+import Button from './button';
 import LoadingIcon from './button-loading';
 
 export {
+  Button,
   ButtonPrimary,
   ButtonSecondary,
   ButtonWhite,

@@ -1,7 +1,13 @@
 import styled from 'styled-components';
 import colors from '../colors';
-import Button from './style';
+import ButtonStyled from './style';
 import PropTypes from 'prop-types';
+
+const Button = styled(ButtonStyled)`
+  color: ${colors.white};
+  background-color: ${colors.coral};
+  border: 1px solid ${colors.coral};
+`;
 
 Button.propTypes = {
   color: PropTypes.oneOf(['primary', 'secondary', 'warning', 'success']),
@@ -15,8 +21,4 @@ Button.defaultProps = {
   variant: 'flat'
 };
 
-export default styled(Button)`
-  color: ${colors.white};
-  background-color: ${colors.coral};
-  border: 1px solid ${colors.coral};
-`;
+export default Button;
