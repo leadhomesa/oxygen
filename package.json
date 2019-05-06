@@ -8,7 +8,7 @@
   "scripts": {
     "build": "rollup -c",
     "build-dev": "rollup -c -w",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook -p 9001 -c .storybook",
     "deploy-storybook": "storybook-to-ghpages",
     "lint": "eslint -c .eslintrc src",
     "build-storybook": "build-storybook"
