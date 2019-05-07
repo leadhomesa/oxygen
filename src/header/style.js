@@ -8,4 +8,5 @@ export const HeaderContainer = styled.div`
   align-items: center;
   margin-left: auto;
   background-color: ${colors.darkStorm};
+  color: ${colors.white};
 `;

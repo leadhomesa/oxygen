@@ -8,8 +8,6 @@ import Footer from '../src/footer';
 
 import { FormFieldLabel } from '../src/form';
 
-import { ReactComponent as LeadhomeLogo } from '../assets/leadhome-logo.svg';
-
 storiesOf('Input', module)
   .add('Default', () => (
     <>
@@ -43,29 +41,6 @@ storiesOf('Dropdown', module).add('Default Dropdown', () => (
     options={{ yes: 'Yes', no: 'No' }}
   />
 ));
-
-storiesOf('Header', module)
-  .add('Header with LH logo', () => <Header />)
-  .add('Header passed in LH logo', () => <Header logo={LeadhomeLogo} />)
-  .add('Header with children', () => (
-    <Header>
-      <a href='#' style={{ color: 'white' }}>
-        Child
-      </a>
-      <a href='#' style={{ color: 'white' }}>
-        Child
-      </a>
-      <a href='#' style={{ color: 'white' }}>
-        Child
-      </a>
-      <a href='#' style={{ color: 'white' }}>
-        Child
-      </a>
-      <a href='#' style={{ color: 'white' }}>
-        Child
-      </a>
-    </Header>
-  ));
 
 storiesOf('Footer', module)
   .add('Footer with text', () => <Footer>© Leadhome Pty Ltd </Footer>)
