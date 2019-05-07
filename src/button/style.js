@@ -1,4 +1,17 @@
 import styled, { css } from 'styled-components';
+import colors from '../colors';
+
+const BoxShadow = css`
+  box-shadow: 0 9px 7px 0 rgba(0, 0, 0, 0.06), 0 3px 4px 0 rgba(0, 0, 0, 0.15);
+
+  @media (hover: hover) {
+    &:hover {
+      bottom: 1px;
+      box-shadow: 0 11px 9px -1px rgba(0, 0, 0, 0.06),
+        0 5px 6px -1px rgba(0, 0, 0, 0.15);
+    }
+  }
+`;
 
 const Disabled = css`
   opacity: 0.5;
@@ -13,6 +26,40 @@ const LargeButton = css`
   padding: 16px 20px 16px;
 `;
 
+const PrimaryButton = css`
+  color: ${({ variant }) => (variant === 'flat' ? colors.white : colors.coral)};
+  background-color: ${({ variant }) =>
+    variant === 'flat' ? colors.coral : 'transparent'};
+  border: ${({ variant }) =>
+    variant !== 'text' ? `1px solid ${colors.coral}` : 'none'};
+`;
+
+const SecondaryButton = css`
+  color: ${({ variant }) =>
+    variant === 'flat' ? colors.white : colors.lighterStorm};
+  background-color: ${({ variant }) =>
+    variant === 'flat' ? colors.lighterStorm : 'transparent'};
+  border: ${({ variant }) =>
+    variant !== 'text' ? `1px solid ${colors.lighterStorm}` : 'none'};
+`;
+
+const WarningButton = css`
+  color: ${({ variant }) =>
+    variant === 'flat' ? colors.white : colors.warning};
+  background-color: ${({ variant }) =>
+    variant === 'flat' ? colors.warning : 'transparent'};
+  border: ${({ variant }) =>
+    variant !== 'text' ? `1px solid ${colors.warning}` : 'none'};
+`;
+
+const SuccessButton = css`
+  color: ${({ variant }) => (variant === 'flat' ? colors.white : colors.ocean)};
+  background-color: ${({ variant }) =>
+    variant === 'flat' ? colors.ocean : 'transparent'};
+  border: ${({ variant }) =>
+    variant !== 'text' ? `1px solid ${colors.ocean}` : 'none'};
+`;
+
 export default styled.button`
   text-decoration: none;
   display: inline-block;
@@ -23,25 +70,42 @@ export default styled.button`
   padding: 11px 16px 10px;
   margin: 4px;
   font-size: 15px;
-  box-shadow: 0 7px 5px -5px rgba(0, 0, 0, 0.1);
   position: relative;
   bottom: 0;
   transition: all 0.1s ease-out;
   outline: none;
 
-  @media (hover: hover) {disabl
-    &:hover {
-      bottom: 1px;
-      box-shadow: 0 8px 8px -5px;
-        rgba(0, 0, 0, 0.12);
-    }
-  }
-  
+  ${({ variant }) => (variant !== 'text' ? BoxShadow : 'none')};
+
   & > svg {
-    margin: -7px;
+    float: right;
+    height: 20px;
+    margin: -2px -5px -5px 2px;
+    width: 20px;
   }
-  
+
   ${({ disabled }) => disabled && Disabled};
-  ${({ sm }) => sm && SmallButton};
-  ${({ lg }) => lg && LargeButton};
+
+  ${({ size }) => {
+    switch (size) {
+      case 'sm':
+        return SmallButton;
+      case 'lg':
+        return LargeButton;
+    }
+  }};
+
+  ${({ color }) => {
+    switch (color) {
+      case 'secondary':
+        return SecondaryButton;
+      case 'warning':
+        return WarningButton;
+      case 'success':
+        return SuccessButton;
+      case 'primary':
+      default:
+        return PrimaryButton;
+    }
+  }};
 `;

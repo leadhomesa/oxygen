@@ -10,28 +10,60 @@
     "node": true
   },
   "parser": "babel-eslint",
-  "plugins": ["jsx-a11y", "import", "unicorn"],
+  "plugins": [
+    "jsx-a11y",
+    "import",
+    "unicorn"
+  ],
   "rules": {
-    "jsx-quotes": ["error", "prefer-single"],
-    "semi": ["error", "always"],
-    "curly": ["error", "multi"],
-    "indent": ["error", 2],
+    "jsx-quotes": [
+      "error",
+      "prefer-single"
+    ],
+    "semi": [
+      "error",
+      "always"
+    ],
+    "curly": [
+      "error",
+      "multi"
+    ],
+    "indent": [
+      "error",
+      2,
+      {
+        "SwitchCase": 1
+      }
+    ],
     "no-tabs": "off",
     "space-before-function-paren": "off",
-    "prefer-arrow-callback": ["error"],
+    "prefer-arrow-callback": [
+      "error"
+    ],
     "camelcase": [
       "error",
       {
         "properties": "always"
       }
     ],
-    "no-multi-spaces": ["error"],
+    "no-multi-spaces": [
+      "error"
+    ],
     "react/display-name": 0,
-    "react/prefer-es6-class": ["error", "always"],
+    "react/prefer-es6-class": [
+      "error",
+      "always"
+    ],
     "react/prefer-stateless-function": "warn",
     "react/jsx-pascal-case": "error",
-    "react/jsx-indent": ["error", 2],
-    "react/jsx-indent-props": ["error", 2],
+    "react/jsx-indent": [
+      "error",
+      2
+    ],
+    "react/jsx-indent-props": [
+      "error",
+      2
+    ],
     "react/self-closing-comp": [
       "error",
       {
@@ -39,7 +71,10 @@
         "html": true
       }
     ],
-    "react/jsx-closing-bracket-location": ["error", "tag-aligned"],
+    "react/jsx-closing-bracket-location": [
+      "error",
+      "tag-aligned"
+    ],
     "react/jsx-wrap-multilines": [
       "error",
       {
@@ -52,7 +87,9 @@
         "prop": "ignore"
       }
     ],
-    "react/jsx-boolean-value": ["error"],
+    "react/jsx-boolean-value": [
+      "error"
+    ],
     "react/jsx-tag-spacing": [
       "error",
       {
@@ -69,7 +106,9 @@
   "settings": {
     "import/resolver": {
       "node": {
-        "moduleDirectory": ["node_modules"]
+        "moduleDirectory": [
+          "node_modules"
+        ]
       }
     }
   }

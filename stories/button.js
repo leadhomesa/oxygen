@@ -1,47 +1,35 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import {
-  ButtonPrimary,
-  ButtonSecondary,
-  ButtonWhite,
-  ButtonPill,
-  ButtonWarning,
-  ButtonOcean,
-  ButtonDark
-} from '../src/button';
+import { boolean, select, text } from '@storybook/addon-knobs';
+import Button from '../src/button';
 
-storiesOf('Buttons', module)
-  .add('Primary Button', () => (
-    <ButtonPrimary>Hello Button</ButtonPrimary>
-  ))
-  .add('Secondary Button', () => (
-    <ButtonSecondary>Hello Button</ButtonSecondary>
-  ))
-  .add('White Button', () => (
-    <ButtonWhite>Hello Button</ButtonWhite>
-  ))
-  .add('Warning Button', () => (
-    <ButtonWarning>Hello Button</ButtonWarning>
-  ))
-  .add('Success Button', () => (
-    <ButtonOcean>Hello Button</ButtonOcean>
-  ))
-  .add('Dark Button', () => (
-    <ButtonDark>Hello Button</ButtonDark>
-  ))
-  .add('Pill Button', () => (
-    <ButtonPill>Hello Button</ButtonPill>
-  ))
-  .add('Large Button', () => (
-    <ButtonPrimary lg>Hello Button</ButtonPrimary>
-  ))
-  .add('Medium Button', () => (
-    <ButtonPrimary>Hello Button</ButtonPrimary>
-  ))
-  .add('Small Button', () => (
-    <ButtonPrimary sm>Hello Button</ButtonPrimary>
-  ))
-  .add('Disabled Button', () => (
-    <ButtonPrimary disabled>Hello Button</ButtonPrimary>
-  ))
+const buttonSizes = {
+  Small: 'sm',
+  Medium: 'md',
+  Large: 'lg'
+};
 
+const buttonColours = {
+  Primary: 'primary',
+  Secondary: 'secondary',
+  Warning: 'warning',
+  Success: 'success'
+};
+
+const buttonVariants = {
+  Flat: 'flat',
+  Outlined: 'outlined',
+  Text: 'text'
+};
+
+storiesOf('Buttons', module).add('Button', () => (
+  <Button
+    color={select('Colour', buttonColours, 'primary')}
+    disabled={boolean('Disabled', false)}
+    loading={boolean('Loading', false)}
+    size={select('Size', buttonSizes, 'md')}
+    variant={select('Variant', buttonVariants, 'flat')}
+  >
+    {text('Label', 'Hello Button')}
+  </Button>
+));
