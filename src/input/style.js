@@ -48,20 +48,20 @@ const ContainerDisabled = css`
 `;
 
 export const Container = styled.div`
-  border: ${props => (props.noBorder ? 'none' : `1px solid ${colors.grey}`)};
-  box-shadow: ${props =>
-    props.noShadow ? 'none' : 'inset 0 2px 4px 0 rgba(65,65,96,0.15)'};
+  border: ${({ noBorder }) => (noBorder ? 'none' : `1px solid ${colors.grey}`)};
+  box-shadow: ${({ noShadow }) =>
+    noShadow ? 'none' : 'inset 0 2px 4px 0 rgba(65,65,96,0.18)'};
   border-radius: 4px;
   display: flex;
 
-  flex-grow: ${props => props.flexGrow || '0'};
+  flex-grow: ${({ flexGrow }) => flexGrow || '0'};
   ${({ active }) => active && ContainerActive};
   ${({ disabled }) => disabled && ContainerDisabled};
   ${({ warning }) => warning && ContainerWarning};
 `;
 
 export const AddOnContainer = styled.div`
-  padding: ${props => (props.sm ? '0 13px' : '0 18px')};
+  padding: ${({ sm }) => (sm ? '0 13px' : '0 18px')};
   display: flex;
   align-items: center;
   border-right: 1px solid ${colors.grey};
@@ -69,7 +69,7 @@ export const AddOnContainer = styled.div`
 `;
 
 export const AffixContainer = styled.div`
-  padding: ${props => (props.sm ? '0 13px' : '0 18px')};
+  padding: ${({ sm }) => (sm ? '0 13px' : '0 18px')};
   display: flex;
   align-items: center;
   border-left: 1px solid ${colors.grey};
