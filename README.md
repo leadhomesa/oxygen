@@ -8,9 +8,16 @@ Leadhome atomic component library for React
 ```
  npm install @leadhome/oxygen
 ```
+
+or
+
+```
+ yarn add @leadhome/oxygen
+```
 ## Authors
 * **Patrick** - *Design system* - [Patrick](https://za.linkedin.com/in/patrick-glynn-818082123)
 * **Kyle** - *Inital work* - [MrOpperman](https://github.com/MrOpperman)
+* **Seagyn** - *Component updates* - [seagyn](https://github.com/seagyn)
 
 ## Contributing
 
