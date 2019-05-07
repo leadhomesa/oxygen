@@ -3,18 +3,16 @@ import StyledButton from './style';
 import PropTypes from 'prop-types';
 import Loading from './loading.svg';
 
-const Button = ({ children, loading, icon, ...rest }) => (
+const Button = ({ children, loading, ...rest }) => (
   <StyledButton {...rest}>
     {children}
     {loading && <Loading />}
-    {icon && <icon />}
   </StyledButton>
 );
 
 Button.propTypes = {
   color: PropTypes.oneOf(['primary', 'secondary', 'warning', 'success']),
   children: PropTypes.any.isRequired,
-  icon: PropTypes.element,
   loading: PropTypes.bool,
   size: PropTypes.oneOf(['sm', 'md', 'lg']),
   variant: PropTypes.oneOf(['flat', 'outlined', 'text'])
