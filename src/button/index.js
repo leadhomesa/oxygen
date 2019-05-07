@@ -1,19 +1,28 @@
-import ButtonPrimary from './button-primary';
-import ButtonSecondary from './button-secondary';
-import ButtonWhite from './button-white';
-import ButtonPill from './button-pill';
-import ButtonWarning from './button-warning';
-import ButtonOcean from './button-ocean';
-import ButtonDark from './button-dark';
-import LoadingIcon from './button-loading';
+import React from 'react';
+import StyledButton from './style';
+import PropTypes from 'prop-types';
+import Loading from './loading.svg';
 
-export {
-  ButtonPrimary,
-  ButtonSecondary,
-  ButtonWhite,
-  ButtonPill,
-  ButtonWarning,
-  ButtonOcean,
-  ButtonDark,
-  LoadingIcon
+const Button = ({ children, loading, ...rest }) => (
+  <StyledButton {...rest}>
+    {children}
+    {loading && <Loading />}
+  </StyledButton>
+);
+
+Button.propTypes = {
+  color: PropTypes.oneOf(['primary', 'secondary', 'warning', 'success']),
+  children: PropTypes.any.isRequired,
+  loading: PropTypes.bool,
+  size: PropTypes.oneOf(['sm', 'md', 'lg']),
+  variant: PropTypes.oneOf(['flat', 'outlined', 'text'])
 };
+
+Button.defaultProps = {
+  color: 'primary',
+  loading: false,
+  size: 'md',
+  variant: 'flat'
+};
+
+export default Button;
