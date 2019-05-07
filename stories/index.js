@@ -8,6 +8,8 @@ import Footer from '../src/footer';
 
 import { FormFieldLabel } from '../src/form';
 
+import { ReactComponent as LeadhomeLogo } from '../assets/leadhome-logo.svg';
+
 storiesOf('Input', module)
   .add('Default', () => (
     <>
@@ -44,6 +46,7 @@ storiesOf('Dropdown', module).add('Default Dropdown', () => (
 
 storiesOf('Header', module)
   .add('Header with LH logo', () => <Header />)
+  .add('Header passed in LH logo', () => <Header logo={LeadhomeLogo} />)
   .add('Header with children', () => (
     <Header>
       <a href='#' style={{ color: 'white' }}>
