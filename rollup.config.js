@@ -17,7 +17,9 @@ export default {
     resolve({
       jsnext: true
     }),
-    commonjs()
+    commonjs({
+      include: /node_modules/
+    })
   ],
   output: [
     {
