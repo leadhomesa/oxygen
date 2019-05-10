@@ -1,12 +1,13 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { boolean, select, text } from '@storybook/addon-knobs';
+import { boolean } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 
 import Input from '../src/input';
-import Dropdown from '../src/dropdown';
 
 import { FormFieldLabel } from '../src/form';
+import InlineForm from '../src/inline-form/index';
+import Button from '../src/button/index';
 
 storiesOf('Forms', module)
   .add('Input', () => (
@@ -36,4 +37,13 @@ storiesOf('Forms', module)
       placeholder='Disabled'
       disabled
     />
+  ))
+  .add('Inline Form', () => (
+    <InlineForm>
+      <Input
+        input={{ value: '', onChange: () => console.log('input') }}
+        placeholder='Placeholder'
+      />
+      <Button>Search</Button>
+    </InlineForm>
   ));
