@@ -22,7 +22,7 @@ export default styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  height: 40px;
+  height: 60px;
   padding: 0 20px;
   width: 100%;
 
