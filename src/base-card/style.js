@@ -31,6 +31,7 @@ export default styled.div`
   border-radius: 4px;
   display: flex;
   justify-content: center;
+  overflow: hidden;
 
   ${({ shadow }) => {
     switch (shadow) {

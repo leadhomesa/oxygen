@@ -23,7 +23,7 @@ addParameters({
   },
 });
 
+addDecorator(withKnobs);
 addDecorator(withInfo);
 addDecorator(withGlobal);
-addDecorator(withKnobs);
 configure(loadStories, module);
