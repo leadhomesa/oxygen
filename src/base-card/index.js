@@ -1,12 +1,12 @@
 import React from 'react';
-import StyledCard from './style';
+import StyledBaseCard from './style';
 import PropTypes from 'prop-types';
 
-const Card = ({ children, shadow }) => (
-  <StyledCard shadow={shadow}>{children}</StyledCard>
+const BaseCard = ({ children, shadow }) => (
+  <StyledBaseCard shadow={shadow}>{children}</StyledBaseCard>
 );
 
-Card.propTypes = {
+BaseCard.propTypes = {
   children: PropTypes.node.isRequired,
   shadow: PropTypes.oneOf([
     'standard',
@@ -18,4 +18,4 @@ Card.propTypes = {
   ])
 };
 
-export default Card;
+export default BaseCard;

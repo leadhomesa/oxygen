@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { select, text } from '@storybook/addon-knobs';
-import Card from '../src/card';
+import BaseCard from '../src/base-card';
 
 const cardShadows = {
   'Diffuse (Default)': 'diffuse',
@@ -12,8 +12,11 @@ const cardShadows = {
   'Hard Thick (Floating Object)': 'hard-thick'
 };
 
-storiesOf('Cards', module).add('Card', () => (
-  <Card shadow={select('Shadow', cardShadows, 'diffuse')}>
-    {text('Label', 'This is a card 🎉')}
-  </Card>
+storiesOf('Cards', module).add('Base Card', () => (
+  <BaseCard shadow={select('Shadow', cardShadows, '')}>
+    {text(
+      'Label',
+      'This is a base card 🎉 You generally would not use it directly.'
+    )}
+  </BaseCard>
 ));
