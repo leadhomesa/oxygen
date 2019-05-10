@@ -69,7 +69,7 @@
     "styled-icons": "^7.12.0"
   },
   "devDependencies": {
-    "@leadhome/eslint-config": "^1.0.1",
+    "@leadhome/eslint-config": "^1.0.2",
     "@storybook/addon-actions": "^5.0.11",
     "@storybook/addon-info": "^5.0.11",
     "@storybook/addon-knobs": "^5.0.11",
