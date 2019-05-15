@@ -11,4 +11,4 @@ RUN npm i
 RUN npm run lint
 
 # Release
-CMD [ "npx", "semantic-release --no-ci" ]
+CMD [ "npx", "semantic-release", '--no-ci' ]
