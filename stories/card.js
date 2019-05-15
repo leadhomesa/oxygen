@@ -45,8 +45,11 @@ storiesOf('Cards', module)
       <CardBody
         image='https://s3-eu-west-1.amazonaws.com/leadhome-listing-photos/a25a6edf-2dd0-4538-99ef-8f79267d8932-md.jpg'
         meta={<Meta />}
-        price='R599,000,00'
-        description='This is a stunning home with beautiful views.'
+        price={text('Price', 'R599,000,00')}
+        description={text(
+          'Price',
+          'This is a stunning home with beautiful views.'
+        )}
       />
       <CardFooter
         variant={select('Variant', propertyCardVariants, 'for-sale')}
