@@ -2,7 +2,9 @@
 
 Leadhome atomic component library for React
 
-[![Storybook](https://leadhomesa.github.io/oxygen/)](https://leadhomesa.github.io/oxygen/)
+[![Build Status](https://badge.buildkite.com/c8970182a8bc39a8a7e93f695343b544b99c3ef66235d7ee44.svg)](https://buildkite.com/leadhome/oxygen) ![npm (scoped)](https://img.shields.io/npm/v/@leadhome/oxygen.svg)
+
+[Storybook](https://leadhomesa.github.io/oxygen/)
 
 ## Install
 ```
