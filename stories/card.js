@@ -4,6 +4,10 @@ import { select, text } from '@storybook/addon-knobs';
 import BaseCard from '../src/base-card';
 import PropertyCard from '../src/property-card';
 import CardFooter from '../src/card-footer/index';
+import CardBody from '../src/card-body/index';
+import Pill from '../src/pill';
+import colors from '../src/colors';
+import styled from 'styled-components';
 
 const cardShadows = {
   'Diffuse (Default)': 'diffuse',
@@ -20,6 +24,13 @@ const propertyCardVariants = {
   'For Sale': 'for-sale'
 };
 
+const StyledPill = styled(Pill)`
+  background: ${colors.darkCoral};
+  color: ${colors.white};
+`;
+
+const Meta = () => <StyledPill>Under Offer</StyledPill>;
+
 storiesOf('Cards', module)
   .add('Base Card', () => (
     <BaseCard shadow={select('Shadow', cardShadows, '')}>
@@ -31,6 +42,12 @@ storiesOf('Cards', module)
   ))
   .add('Property Card', () => (
     <PropertyCard shadow={select('Shadow', cardShadows, 'diffuse')}>
+      <CardBody
+        image='https://s3-eu-west-1.amazonaws.com/leadhome-listing-photos/a25a6edf-2dd0-4538-99ef-8f79267d8932-md.jpg'
+        meta={<Meta />}
+        price='R599,000,00'
+        description='This is a stunning home with beautiful views.'
+      />
       <CardFooter
         variant={select('Variant', propertyCardVariants, 'for-sale')}
         suburb={text('Suburb', 'Ferndale')}

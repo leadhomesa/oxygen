@@ -1,6 +1,9 @@
 import styled from 'styled-components';
-import BaseCard from '../base-card/index';
+import BaseCard from '../base-card';
 
 export default styled(BaseCard)`
-  background: green;
+  && {
+    flex-direction: column;
+    max-width: 420px;
+  }
 `;
