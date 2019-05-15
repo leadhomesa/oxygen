@@ -1,6 +1,6 @@
 {
   "name": "@leadhome/oxygen",
-  "version": "0.1.0",
+  "version": "0.0.0-development",
   "description": "A react component library",
   "main": "build/oxygen.cjs.js",
   "module": "build/oxygen.esm.js",
@@ -10,7 +10,8 @@
     "storybook": "start-storybook -p 9001 -c .storybook",
     "deploy-storybook": "storybook-to-ghpages",
     "lint": "eslint -c .eslintrc src",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "semantic-release": "semantic-release"
   },
   "keywords": [
     "React component lib",
@@ -23,7 +24,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/leadhomesa/oxygen.git"
+    "url": "https://github.com/leadhomesa/oxygen.git"
   },
   "author": "Leadhome",
   "license": "MIT",
@@ -70,6 +71,7 @@
     "rollup-plugin-commonjs": "^9.3.4",
     "rollup-plugin-image": "^1.0.2",
     "rollup-plugin-node-resolve": "^4.2.4",
-    "rollup-plugin-react-svg": "^3.0.0"
+    "rollup-plugin-react-svg": "^3.0.0",
+    "semantic-release": "^15.13.12"
   }
 }
