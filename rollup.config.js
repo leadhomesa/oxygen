@@ -8,14 +8,13 @@ import pkg from './package.json';
 export default {
   input: 'src/index.js',
   external: ['styled-components', 'react', 'react-dom', 'prop-types'],
-  globals: { 'styled-components': 'styled' },
   plugins: [
     reactSvg(),
     babel({
       exclude: 'node_modules/**'
     }),
     resolve({
-      jsnext: true
+      dedupe: ['react', 'react-dom', 'styled-components', 'prop-types']
     }),
     commonjs({
       include: /node_modules/
@@ -29,11 +28,6 @@ export default {
     {
       file: pkg.module,
       format: 'es'
-    },
-    {
-      file: pkg.browser,
-      name: 'realib',
-      format: 'umd'
     }
   ]
 };
