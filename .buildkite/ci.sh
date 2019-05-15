@@ -3,11 +3,4 @@
 # Init
 set -euxo pipefail
 
-# Installs
-npm install
-
-# Scripts
-npm run lint
-
-# Deploy
-npx semantic-release
+docker run -v $(pwd):/app -w /app node:alpine npm run ci
