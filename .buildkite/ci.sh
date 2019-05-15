@@ -3,4 +3,4 @@
 # Init
 set -euxo pipefail
 
-docker run -v $(pwd):/app node:alpine npm install && npm run lint && npx semantic-release
+docker run -v $(pwd):/app -w /app node:alpine npm run ci
