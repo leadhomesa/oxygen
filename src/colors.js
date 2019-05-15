@@ -3,6 +3,7 @@ export default {
   white: '#FFFFFF',
 
   coral: '#FF6A70',
+  darkCoral: '#fd4b51',
 
   ocean: '#4DB3BF',
   lightOcean: '#E3F9FC',
