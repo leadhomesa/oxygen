@@ -3,4 +3,5 @@
 # Init
 set -euxo pipefail
 
-docker build --build-arg GH_TOKEN=${GH_TOKEN} NPM_TOKEN=${NPM_TOKEN}.
+docker build -t oxygen .
+docker run -e GH_TOKEN=${GH_TOKEN} -e NPM_TOKEN=${NPM_TOKEN} oxygen

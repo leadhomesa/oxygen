@@ -11,8 +11,7 @@
     "deploy-storybook": "storybook-to-ghpages",
     "lint": "eslint -c .eslintrc src",
     "build-storybook": "build-storybook",
-    "semantic-release": "semantic-release",
-    "ci": "npm install && npm run lint && npx semantic-release"
+    "semantic-release": "semantic-release"
   },
   "keywords": [
     "React component lib",

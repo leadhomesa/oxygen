@@ -8,7 +8,7 @@ COPY . .
 RUN npm i
 
 # Tests
-RUN npm lint
+RUN npm run lint
 
 # Release
-RUN npx semantic-release
+CMD [ "npx", "semantic-release" ]
