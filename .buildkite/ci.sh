@@ -3,4 +3,4 @@
 # Init
 set -euxo pipefail
 
-docker run -v $(pwd):/app -w /app node:alpine npm run ci
+docker build --build-arg GH_TOKEN=${GH_TOKEN} NPM_TOKEN=${NPM_TOKEN}.
