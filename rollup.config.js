@@ -1,23 +1,27 @@
 import resolve from 'rollup-plugin-node-resolve';
-import commonjs from 'rollup-plugin-commonjs';
 import babel from 'rollup-plugin-babel';
 import reactSvg from 'rollup-plugin-react-svg';
 
 import pkg from './package.json';
 
+const externalDeps = [
+  'styled-components',
+  'react',
+  'react-dom',
+  'prop-types',
+  'styled-icons'
+];
+
 export default {
   input: 'src/index.js',
-  external: ['styled-components', 'react', 'react-dom', 'prop-types'],
+  external: externalDeps,
   plugins: [
     reactSvg(),
     babel({
       exclude: 'node_modules/**'
     }),
     resolve({
-      dedupe: ['react', 'react-dom', 'styled-components', 'prop-types']
-    }),
-    commonjs({
-      include: /node_modules/
+      dedupe: externalDeps
     })
   ],
   output: [
@@ -27,7 +31,7 @@ export default {
     },
     {
       file: pkg.module,
-      format: 'es'
+      format: 'esm'
     }
   ]
 };
