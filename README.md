@@ -24,6 +24,7 @@ or
 - Cards
 - Inputs
 - Buttons
+- Inline Form
 
 ## Authors
 * **Patrick** - *Design system* - [Patrick](https://za.linkedin.com/in/patrick-glynn-818082123)
