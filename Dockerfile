@@ -1,6 +1,6 @@
 FROM node:10-alpine as build
 
-RUN apk add --no-cache git
+RUN apk add --no-cache bash git openssh
 
 # Install
 WORKDIR /app
