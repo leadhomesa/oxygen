@@ -7,6 +7,7 @@
   "browser": "build/oxygen.umd.js",
   "scripts": {
     "build": "rollup -c",
+    "commit": "npx git-cz",
     "start": "rollup -c -w",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "deploy-storybook": "storybook-to-ghpages",
@@ -64,6 +65,7 @@
     "babel-plugin-inline-react-svg": "^1.1.0",
     "babel-plugin-styled-components": "^1.10.0",
     "babel-plugin-transform-inline-environment-variables": "^0.4.3",
+    "cz-conventional-changelog": "^2.1.0",
     "husky": "^1.3.1",
     "npm-run-all": "^4.1.5",
     "react-svg-loader": "^3.0.1",
@@ -73,5 +75,10 @@
     "rollup-plugin-node-resolve": "^4.2.4",
     "rollup-plugin-react-svg": "^3.0.0",
     "semantic-release": "^15.13.12"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
