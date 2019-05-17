@@ -25,7 +25,6 @@ or
 - Inputs
 - Buttons
 - Inline Form
-- More to come...
 
 ## Authors
 * **Patrick** - *Design system* - [Patrick](https://za.linkedin.com/in/patrick-glynn-818082123)
