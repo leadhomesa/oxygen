@@ -8,7 +8,7 @@ import Dropdown from './dropdown';
 import Header from './header';
 import Footer from './footer';
 
-export default {
+const Oxygen = {
   Button,
 
   Colors,
@@ -21,3 +21,5 @@ export default {
   Header,
   Footer
 };
+
+export default Oxygen;
