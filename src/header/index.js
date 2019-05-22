@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 import { HeaderContainer } from './style';
 import { ReactComponent as LeadhomeLogo } from '../../assets/leadhome-logo.svg';
 
-const Header = ({ logo: Logo, children }) => (
-  <HeaderContainer>
+const Header = ({ logo: Logo, children, ...rest }) => (
+  <HeaderContainer {...rest}>
     {Logo && <Logo />}
     {!Logo && <LeadhomeLogo />}
     {children}
