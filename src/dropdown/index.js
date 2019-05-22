@@ -8,7 +8,7 @@ import {
   ArrowIcon
 } from './style';
 
-const Dropdown = ({ options, input }) => {
+const Dropdown = ({ options, input, ...rest }) => {
   const [dropdownOpen, toggleDropdown] = useState(false);
   const [selectedValue, updateSelectedValue] = useState(input.value);
 
@@ -19,7 +19,7 @@ const Dropdown = ({ options, input }) => {
   });
 
   return (
-    <DropdownContainer onClick={() => toggleDropdown(!dropdownOpen)}>
+    <DropdownContainer onClick={() => toggleDropdown(!dropdownOpen)} {...rest}>
       <SelectedOption>
         {options[selectedValue]}
         <ArrowIcon open={dropdownOpen} />
