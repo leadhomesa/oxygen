@@ -1,1 +1,0 @@
-{"version":3,"sources":["../../src/property-card/style.js"],"names":["BaseCard"],"mappings":";;;;;;;AAAA;;AACA;;;;eAEe,kCAAOA,oBAAP,C","sourcesContent":["import styled from 'styled-components';\nimport BaseCard from '../base-card';\n\nexport default styled(BaseCard)`\n  && {\n    flex-direction: column;\n    max-width: 420px;\n  }\n`;\n"],"file":"style.js"}
