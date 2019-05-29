@@ -3,6 +3,7 @@ const path = require('path');
 const buildFolder = path.join(__dirname, '..', 'build');
 
 module.exports = {
+  devtool: 'source-map',
   entry: './src/index.js',
   output: {
     path: buildFolder,

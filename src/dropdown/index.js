@@ -43,7 +43,7 @@ const Dropdown = ({ options, input }) => {
 
 Dropdown.propTypes = {
   options: PropTypes.shape({
-    [name]: PropTypes.string
+    name: PropTypes.arrayOf(PropTypes.string)
   }).isRequired,
   input: PropTypes.shape({
     name: PropTypes.string,

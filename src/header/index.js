@@ -14,7 +14,7 @@ const Header = ({ logo: Logo, children }) => (
 
 Header.propTypes = {
   logo: PropTypes.func,
-  children: PropTypes.oneOfType([PropTypes.string, PropTypes.object])
+  children: PropTypes.node
 };
 
 export default Header;
