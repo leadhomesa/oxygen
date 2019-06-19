@@ -1,16 +1,17 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import Close from '../../assets/close.svg';
+import Colors from '../colors';
 
-const DarkBg = css`
-  background-color: #f0f0f8;
+const DarkBg = `
+  background-color: ${Colors.darkbg};
 `;
 
-const HideBorder = css`
+const HideBorder = `
   border: none;
 `;
 
 export const Container = styled.div`
-  text-decoration: none !important;
+  text-decoration: none;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,15 +19,15 @@ export const Container = styled.div`
   text-align: center;
   line-height: 1;
   padding: ${props => (props.slim ? '6px 12px' : '12px 18px')};
-  background: #fff;
-  border: 1px solid #d1d1e8;
+  background: ${Colors.white};
+  border: 1px solid ${Colors.grey};
   font-size: 15px;
   font-weight: 600;
   position: relative;
   bottom: 0;
   transition: all 0.1s ease-out;
   margin: 4px;
-  color: #8280b0;
+  color: ${Colors.lightStorm};
   cursor: default;
   width: min-content;
   ${({ dark }) => dark && DarkBg};
@@ -46,9 +47,9 @@ export const Wrapper = styled.div`
 export const CloseButtonIcon = styled(Close)`
   width: 20px;
   height: 20px;
-  fill: #ff6a70;
+  fill: ${Colors.coral};
   padding-top: 2px;
-  cursor: pointer !important;
+  cursor: pointer;
 `;
 
 export const Loader = styled.span`

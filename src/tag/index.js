@@ -43,7 +43,7 @@ Tag.defaultProps = {
 Tag.propTypes = {
   onRemove: PropTypes.func,
   value: PropTypes.any,
-  children: PropTypes.any,
+  children: PropTypes.node,
   loading: PropTypes.bool,
   hideBorder: PropTypes.bool,
   slim: PropTypes.bool,

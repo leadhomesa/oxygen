@@ -22,7 +22,7 @@ const Autocomplete = ({
   affix: Affix,
   icon: Icon,
   addOnSm,
-  input,
+  input = {},
   meta = {},
   parse,
   format,
@@ -36,7 +36,7 @@ const Autocomplete = ({
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [topOffset, setTopOffset] = useState(0);
   const [leftOffset, setLeftOffset] = useState(0);
-  const [list, setList] = useState(getValue(input?.value));
+  const [list, setList] = useState(getValue(input.value));
   const [filteredSuggestions, setFilteredSuggestions] = useState(suggestions);
   const inputEl = useRef(null);
 
@@ -103,6 +103,7 @@ const Autocomplete = ({
     let newList = [...list].filter((item, index) => index !== position);
     setList(newList);
     changeFormValue(newList);
+    if (inputEl.current) inputEl.current.focus();
   };
 
   const showError = meta => meta.error && meta.touched;
@@ -181,8 +182,8 @@ export default Autocomplete;
 Autocomplete.propTypes = {
   input: PropTypes.object,
   addOn: PropTypes.func,
-  affix: PropTypes.object,
-  icon: PropTypes.object,
+  affix: PropTypes.node,
+  icon: PropTypes.node,
   addOnSm: PropTypes.bool,
   allowCustomInput: PropTypes.bool,
   meta: PropTypes.object,
@@ -194,7 +195,5 @@ Autocomplete.propTypes = {
   showWarning: PropTypes.func,
   flexGrow: PropTypes.bool,
   multiple: PropTypes.bool,
-  suggestions: PropTypes.shape({
-    [name]: PropTypes.string
-  }).isRequired
+  suggestions: PropTypes.array.isRequired
 };

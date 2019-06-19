@@ -15,7 +15,6 @@ storiesOf('Autocomplete', module)
   .add('Default', () => {
     let values = ['hello'];
     const onChange = val => {
-      console.log('changing: ', val);
       values = val;
     };
     return (
@@ -34,7 +33,6 @@ storiesOf('Autocomplete', module)
   .add('allowCustomInput', () => {
     let values = ['hello'];
     const onChange = val => {
-      console.log('changing: ', val);
       values = val;
     };
     return (
