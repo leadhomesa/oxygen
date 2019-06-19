@@ -21,5 +21,6 @@ export default {
 
   disabled: '#a9a9bb',
   grey: '#d2d2e4',
-  lightgrey: '#fafafa'
+  lightgrey: '#fafafa',
+  darkbg: '#f0f0f8'
 };
