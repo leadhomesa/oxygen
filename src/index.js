@@ -4,5 +4,15 @@ import Input, { Currency as InputCurrency } from './input';
 import Dropdown from './dropdown';
 import Header from './header';
 import Footer from './footer';
+import AutoComplete from './autocomplete';
 
-export { Button, Colors, Input, InputCurrency, Dropdown, Header, Footer };
+export {
+  Button,
+  Colors,
+  Input,
+  InputCurrency,
+  Dropdown,
+  Header,
+  Footer,
+  AutoComplete
+};
