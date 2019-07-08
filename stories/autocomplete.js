@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import Autocomplete from '../src/autocomplete';
+import AutoComplete from '../src/autocomplete';
 
 import { FormFieldLabel } from '../src/form';
 
@@ -20,7 +20,7 @@ storiesOf('Autocomplete', module)
     return (
       <>
         <FormFieldLabel>Form field label</FormFieldLabel>
-        <Autocomplete
+        <AutoComplete
           input={{
             value: values,
             onChange
@@ -38,7 +38,7 @@ storiesOf('Autocomplete', module)
     return (
       <>
         <FormFieldLabel>Form field label</FormFieldLabel>
-        <Autocomplete
+        <AutoComplete
           allowCustomInput
           input={{
             value: values,

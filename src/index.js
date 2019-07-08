@@ -4,7 +4,7 @@ import Input, { Currency as InputCurrency } from './input';
 import Dropdown from './dropdown';
 import Header from './header';
 import Footer from './footer';
-import Autocomplete from './autocomplete';
+import AutoComplete from './autocomplete';
 
 export {
   Button,
@@ -14,5 +14,5 @@ export {
   Dropdown,
   Header,
   Footer,
-  Autocomplete
+  AutoComplete
 };

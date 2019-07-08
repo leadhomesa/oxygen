@@ -16,7 +16,7 @@ const getValue = val => {
   return [];
 };
 
-const Autocomplete = ({
+const AutoComplete = ({
   suggestions = [],
   addOn: AddOn,
   affix: Affix,
@@ -177,9 +177,9 @@ const Autocomplete = ({
   );
 };
 
-export default Autocomplete;
+export default AutoComplete;
 
-Autocomplete.propTypes = {
+AutoComplete.propTypes = {
   input: PropTypes.object,
   addOn: PropTypes.func,
   affix: PropTypes.node,
