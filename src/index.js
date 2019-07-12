@@ -5,6 +5,7 @@ import Dropdown from './dropdown';
 import Header from './header';
 import Footer from './footer';
 import AutoComplete from './autocomplete';
+import Toast from './toast';
 
 export {
   Button,
@@ -14,5 +15,6 @@ export {
   Dropdown,
   Header,
   Footer,
-  AutoComplete
+  AutoComplete,
+  Toast
 };
