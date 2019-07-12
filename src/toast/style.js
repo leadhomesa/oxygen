@@ -1,16 +1,50 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import colors from '../colors';
+import breakpoints from '../breakpoints';
+import { CheckCircle } from 'styled-icons/material/CheckCircle';
+import { Warning } from 'styled-icons/material/Warning';
 
-export default styled.div`
+const Icon = css`
+  margin-right: 7px;
+  width: 19px;
+
+  @media (min-width: ${breakpoints.small}) {
+    width: 22px;
+  }
+`;
+
+export const CheckIcon = styled(CheckCircle)`
+  ${Icon}
+  color: ${colors.ocean};
+`;
+
+export const WarningIcon = styled(Warning)`
+  ${Icon}
+  color: ${colors.warning};
+`;
+
+export const ToastContainer = styled.div`
   align-items: center;
-  background-color: ${colors.lightGallery};
+  background-color: ${colors.white};
   border-radius: 4px;
   box-shadow: 0 9px 12px 0 rgba(7, 0, 37, 0.07),
     0 2px 4px 0 rgba(7, 0, 37, 0.06);
   color: ${colors.lightStorm};
-  display: block;
-  font-weight: bold;
-  font-size: 11px;
-  padding: 7px 12px;
-  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  font: 600 14px/18px 'Source Sans Pro';
+  height: auto;
+  left: 0;
+  margin: 20px;
+  padding: 5px 10px;
+  position: fixed;
+  right: 0;
+  top: 0;
+
+  @media (min-width: ${breakpoints.small}) {
+    bottom: 0;
+    font-size: 16px;
+    left: auto;
+    top: auto;
+  }
 `;
