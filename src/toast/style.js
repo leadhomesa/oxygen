@@ -13,6 +13,10 @@ const Icon = css`
   }
 `;
 
+const HideToast = css`
+  display: none;
+`;
+
 export const CheckIcon = styled(CheckCircle)`
   ${Icon}
   color: ${colors.ocean};
@@ -40,6 +44,8 @@ export const ToastContainer = styled.div`
   position: fixed;
   right: 0;
   top: 0;
+
+  ${({ hide }) => hide && HideToast} 
 
   @media (min-width: ${breakpoints.small}) {
     bottom: 0;
