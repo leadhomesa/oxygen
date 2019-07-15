@@ -1,19 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { PropTypes } from 'prop-types';
 import { CheckIcon, ToastContainer, WarningIcon } from './style';
 
 const Toast = ({ children, displayTime, type }) => {
-  const [hide, setHide] = useState(false);
-
-  const hideToast = () => {
-    setHide(true);
-  };
-
-  useEffect(() => {
-    setTimeout(hideToast, displayTime);
-  });
   return (
-    <ToastContainer hide={hide}>
+    <ToastContainer displayTime={displayTime}>
       {type === 'warning' && <WarningIcon />}
       {type === 'success' && <CheckIcon />}
       {children}
