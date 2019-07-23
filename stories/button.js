@@ -35,6 +35,9 @@ storiesOf('Buttons', module)
       color={select('Colour', buttonColours, 'primary')}
       disabled={boolean('Disabled', false)}
       loading={boolean('Loading', false)}
+      onClick={() => {
+        alert('You would handle the onClick correctly, yeah?');
+      }}
       size={select('Size', buttonSizes, 'md')}
       variant={select('Variant', buttonVariants, 'flat')}
     >

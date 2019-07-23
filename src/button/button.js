@@ -14,6 +14,7 @@ Button.propTypes = {
   color: PropTypes.oneOf(['primary', 'secondary', 'warning', 'success']),
   children: PropTypes.any.isRequired,
   loading: PropTypes.bool,
+  onClick: PropTypes.func,
   size: PropTypes.oneOf(['sm', 'md', 'lg']),
   variant: PropTypes.oneOf(['flat', 'outlined', 'text'])
 };
