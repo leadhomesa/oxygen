@@ -40,6 +40,7 @@ export const Step = styled.div`
   width: 100%;
   margin-right: 1px;
   font-weight: 600;
+  transition: background-color 0.2s ease-in;
 
   :first-child {
     border-top-left-radius: 15px;
