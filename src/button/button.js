@@ -1,5 +1,5 @@
 import React from 'react';
-import StyledButton from './style';
+import { StyledButton } from './style';
 import PropTypes from 'prop-types';
 import Loading from './loading.svg';
 

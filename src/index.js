@@ -1,4 +1,5 @@
-import Button from './button';
+import Button from './button/button';
+import LinkButton from './button/link-button';
 import Colors from './colors';
 import Input, { Currency as InputCurrency } from './input';
 import Dropdown from './dropdown';
@@ -12,6 +13,7 @@ import PropertyCard from './property-card';
 
 export {
   Button,
+  LinkButton,
   CardBody,
   CardFooter,
   Colors,

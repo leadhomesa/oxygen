@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { boolean, select, text } from '@storybook/addon-knobs';
-import Button from '../src/button';
+import { Button, LinkButton } from '../src';
 
 const buttonSizes = {
   Small: 'sm',
@@ -22,14 +22,26 @@ const buttonVariants = {
   Text: 'text'
 };
 
-storiesOf('Buttons', module).add('Button', () => (
-  <Button
-    color={select('Colour', buttonColours, 'primary')}
-    disabled={boolean('Disabled', false)}
-    loading={boolean('Loading', false)}
-    size={select('Size', buttonSizes, 'md')}
-    variant={select('Variant', buttonVariants, 'flat')}
-  >
-    {text('Label', 'Hello Button')}
-  </Button>
-));
+storiesOf('Buttons', module)
+  .add('Button', () => (
+    <Button
+      color={select('Colour', buttonColours, 'primary')}
+      disabled={boolean('Disabled', false)}
+      loading={boolean('Loading', false)}
+      size={select('Size', buttonSizes, 'md')}
+      variant={select('Variant', buttonVariants, 'flat')}
+    >
+      {text('Label', 'Hello Button')}
+    </Button>
+  ))
+  .add('Link Button', () => (
+    <LinkButton
+      color={select('Colour', buttonColours, 'primary')}
+      disabled={boolean('Disabled', false)}
+      loading={boolean('Loading', false)}
+      size={select('Size', buttonSizes, 'md')}
+      variant={select('Variant', buttonVariants, 'flat')}
+    >
+      {text('Label', 'Hello Button')}
+    </LinkButton>
+  ));

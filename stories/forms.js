@@ -7,7 +7,7 @@ import Input from '../src/input';
 
 import { FormFieldLabel } from '../src/form';
 import InlineForm from '../src/inline-form/index';
-import Button from '../src/button/index';
+import { Button } from '../src';
 
 storiesOf('Forms', module)
   .add('Input', () => (
