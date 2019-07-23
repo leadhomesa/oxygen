@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { text, number } from '@storybook/addon-knobs';
+import { number } from '@storybook/addon-knobs';
 import HeaderWithBreadcrumbs from '../src/header-with-breadcrumbs';
 
 const crumbs = ['Address', 'Time', 'Details'];
