@@ -6,8 +6,9 @@ import Header from './header';
 import Footer from './footer';
 import AutoComplete from './autocomplete';
 import Toast from './toast';
-import CardBody from './card-body/index';
-import CardFooter from './card-footer/index';
+import CardBody from './card-body';
+import CardFooter from './card-footer';
+import PropertyCard from './property-card';
 
 export {
   Button,
@@ -20,5 +21,6 @@ export {
   Header,
   Footer,
   AutoComplete,
-  Toast
+  Toast,
+  PropertyCard
 };
