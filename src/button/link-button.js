@@ -13,6 +13,7 @@ const LinkButton = ({ children, loading, ...rest }) => (
 LinkButton.propTypes = {
   color: PropTypes.oneOf(['primary', 'secondary', 'warning', 'success']),
   children: PropTypes.any.isRequired,
+  href: PropTypes.string.isRequired,
   loading: PropTypes.bool,
   size: PropTypes.oneOf(['sm', 'md', 'lg']),
   variant: PropTypes.oneOf(['flat', 'outlined', 'text'])

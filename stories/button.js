@@ -16,6 +16,13 @@ const buttonColours = {
   Success: 'success'
 };
 
+const buttonTargets = {
+  Self: '_self',
+  Parent: '_parent',
+  Blank: '_blank',
+  Top: '_top'
+};
+
 const buttonVariants = {
   Flat: 'flat',
   Outlined: 'outlined',
@@ -38,8 +45,11 @@ storiesOf('Buttons', module)
     <LinkButton
       color={select('Colour', buttonColours, 'primary')}
       disabled={boolean('Disabled', false)}
+      download={boolean('Download', false)}
+      href={text('href', 'https://www.leadhome.co.za')}
       loading={boolean('Loading', false)}
       size={select('Size', buttonSizes, 'md')}
+      target={select('Target', buttonTargets, '_self')}
       variant={select('Variant', buttonVariants, 'flat')}
     >
       {text('Label', 'Hello Button')}
