@@ -26,12 +26,13 @@ const HardThickShadow = css`
   box-shadow: 10px 25px 30px 0 rgba(7, 0, 37, 0.4);
 `;
 
-export default styled.div`
+export default styled.a`
   background: ${colors.white};
   border-radius: 4px;
   display: flex;
   justify-content: center;
   overflow: hidden;
+  text-decoration: none;
 
   ${({ shadow }) => {
     switch (shadow) {
