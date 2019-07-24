@@ -41,7 +41,10 @@ storiesOf('Cards', module)
     </BaseCard>
   ))
   .add('Property Card', () => (
-    <PropertyCard shadow={select('Shadow', cardShadows, 'diffuse')}>
+    <PropertyCard
+      shadow={select('Shadow', cardShadows, 'diffuse')}
+      href='https://www.leadhome.co.za/'
+    >
       <CardBody
         image='https://s3-eu-west-1.amazonaws.com/leadhome-listing-photos/a25a6edf-2dd0-4538-99ef-8f79267d8932-md.jpg'
         meta={<Meta />}

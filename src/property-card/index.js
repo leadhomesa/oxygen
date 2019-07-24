@@ -7,7 +7,8 @@ const PropertyCard = ({ children, ...rest }) => (
 );
 
 PropertyCard.propTypes = {
-  children: PropTypes.node
+  children: PropTypes.node,
+  href: PropTypes.string.isRequired
 };
 
 export default PropertyCard;

@@ -2,8 +2,8 @@ import React from 'react';
 import StyledBaseCard from './style';
 import PropTypes from 'prop-types';
 
-const BaseCard = ({ children, className, shadow }) => (
-  <StyledBaseCard className={className} shadow={shadow}>
+const BaseCard = ({ children, className, shadow, ...rest }) => (
+  <StyledBaseCard className={className} shadow={shadow} {...rest}>
     {children}
   </StyledBaseCard>
 );
@@ -11,6 +11,7 @@ const BaseCard = ({ children, className, shadow }) => (
 BaseCard.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
+  href: PropTypes.string.isRequired,
   shadow: PropTypes.oneOf([
     'standard',
     'diffuse',
