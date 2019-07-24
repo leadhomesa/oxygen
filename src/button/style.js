@@ -60,20 +60,20 @@ const SuccessButton = css`
     variant !== 'text' ? `1px solid ${colors.ocean}` : 'none'};
 `;
 
-export default styled.button`
-  text-decoration: none;
-  display: inline-block;
-  border-radius: 4px;
-  text-align: center;
-  line-height: 1;
-  cursor: pointer;
-  padding: 11px 16px 10px;
-  margin: 4px;
-  font-size: 15px;
-  position: relative;
+const ButtonStyle = css`
   bottom: 0;
-  transition: all 0.1s ease-out;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  font: 400 15px 'Source Sans Pro', sans-serif;
+  line-height: 1;
+  margin: 4px;
   outline: none;
+  padding: 11px 16px 10px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.1s ease-out;
 
   ${({ variant }) => (variant !== 'text' ? BoxShadow : 'none')};
 
@@ -108,4 +108,12 @@ export default styled.button`
         return PrimaryButton;
     }
   }};
+`;
+
+export const StyledLinkButton = styled.a`
+  ${ButtonStyle}
+`;
+
+export const StyledButton = styled.button`
+  ${ButtonStyle}
 `;

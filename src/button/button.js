@@ -1,5 +1,5 @@
 import React from 'react';
-import StyledButton from './style';
+import { StyledButton } from './style';
 import PropTypes from 'prop-types';
 import Loading from './loading.svg';
 
@@ -14,6 +14,7 @@ Button.propTypes = {
   color: PropTypes.oneOf(['primary', 'secondary', 'warning', 'success']),
   children: PropTypes.any.isRequired,
   loading: PropTypes.bool,
+  onClick: PropTypes.func,
   size: PropTypes.oneOf(['sm', 'md', 'lg']),
   variant: PropTypes.oneOf(['flat', 'outlined', 'text'])
 };
