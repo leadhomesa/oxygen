@@ -4,6 +4,7 @@ import Colors from './colors';
 import Input, { Currency as InputCurrency } from './input';
 import Dropdown from './dropdown';
 import Header from './header';
+import HeaderWithBreadcrumbs from './header-with-breadcrumbs';
 import Footer from './footer';
 import AutoComplete from './autocomplete';
 import Toast from './toast';
@@ -21,6 +22,7 @@ export {
   InputCurrency,
   Dropdown,
   Header,
+  HeaderWithBreadcrumbs,
   Footer,
   AutoComplete,
   Toast,
