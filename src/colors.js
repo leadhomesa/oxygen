@@ -22,5 +22,8 @@ export default {
   disabled: '#a9a9bb',
   grey: '#d2d2e4',
   lightgrey: '#fafafa',
-  darkbg: '#f0f0f8'
+  darkbg: '#f0f0f8',
+
+  monteCarlo: '#87ccd4',
+  paradiso: '#398891'
 };
