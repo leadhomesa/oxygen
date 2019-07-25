@@ -3,7 +3,7 @@ import colors from '../colors';
 
 export const BodyMeta = styled.div`
   background: linear-gradient(360deg, transparent 0, rgba(59, 59, 87, 0.8));
-  padding: 20px;
+  padding: 20px 20px 0;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -16,14 +16,15 @@ export const BodyData = styled.div`
   background: linear-gradient(180deg, transparent 0, rgba(59, 59, 87, 0.8));
   display: flex;
   flex-direction: row;
+  font-size: 1em;
   justify-content: space-between;
-  padding: 20px;
+  padding: 0 20px 20px;
   width: 100%;
 `;
 
 export const BodyPrice = styled.div`
   flex-grow: 1;
-  font-size: 20px;
+  font-size: 1.3rem;
   font-weight: bold;
 `;
 
@@ -41,7 +42,7 @@ export default styled.div`
   color: ${colors.white};
   display: flex;
   flex-direction: column;
-  height: 300px;
+  flex-grow: 9;
   justify-content: space-between;
   width: 100%;
 `;

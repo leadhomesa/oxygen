@@ -1,9 +1,11 @@
 import React from 'react';
-import StyledPropertyCard from './style';
+import { CardContainer, StyledPropertyCard } from './style';
 import { PropTypes } from 'prop-types';
 
 const PropertyCard = ({ children, ...rest }) => (
-  <StyledPropertyCard {...rest}>{children}</StyledPropertyCard>
+  <CardContainer>
+    <StyledPropertyCard {...rest}>{children}</StyledPropertyCard>
+  </CardContainer>
 );
 
 PropertyCard.propTypes = {

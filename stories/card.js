@@ -41,24 +41,32 @@ storiesOf('Cards', module)
     </BaseCard>
   ))
   .add('Property Card', () => (
-    <PropertyCard
-      shadow={select('Shadow', cardShadows, 'diffuse')}
-      href='https://www.leadhome.co.za/'
+    <div
+      style={{
+        width: `${text('Container Width', '320')}px`,
+        maxWidth: '420px',
+        minWidth: '260px'
+      }}
     >
-      <CardBody
-        image='https://s3-eu-west-1.amazonaws.com/leadhome-listing-photos/a25a6edf-2dd0-4538-99ef-8f79267d8932-md.jpg'
-        meta={<Meta />}
-        price={text('Price', 'R599,000,00')}
-        description={text(
-          'Price',
-          'This is a stunning home with beautiful views.'
-        )}
-      />
-      <CardFooter
-        variant={select('Variant', propertyCardVariants, 'for-sale')}
-        suburb={text('Suburb', 'Ferndale')}
+      <PropertyCard
+        shadow={select('Shadow', cardShadows, 'diffuse')}
+        href='https://www.leadhome.co.za/'
       >
-        <strong>Reserved.</strong>
-      </CardFooter>
-    </PropertyCard>
+        <CardBody
+          image='https://s3-eu-west-1.amazonaws.com/leadhome-listing-photos/a25a6edf-2dd0-4538-99ef-8f79267d8932-md.jpg'
+          meta={<Meta />}
+          price={text('Price', 'R599,000,00')}
+          description={text(
+            'Price',
+            'This is a stunning home with beautiful views.'
+          )}
+        />
+        <CardFooter
+          variant={select('Variant', propertyCardVariants, 'for-sale')}
+          suburb={text('Suburb', 'Ferndale')}
+        >
+          <strong>Reserved.</strong>
+        </CardFooter>
+      </PropertyCard>
+    </div>
   ));
