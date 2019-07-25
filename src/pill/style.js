@@ -8,7 +8,7 @@ export default styled.div`
   color: ${colors.lightStorm};
   display: flex;
   font-weight: bold;
-  font-size: 11px;
+  font-size: 0.65rem;
   padding: 7px 12px;
   text-transform: uppercase;
 `;

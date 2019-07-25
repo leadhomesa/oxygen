@@ -21,8 +21,10 @@ export default styled.div`
   color: ${colors.storm};
   display: flex;
   flex-direction: row;
+  flex-grow: 1;
   justify-content: space-between;
-  height: 60px;
+  max-height: 60px;
+  min-height: 45px;
   padding: 0 20px;
   width: 100%;
 
