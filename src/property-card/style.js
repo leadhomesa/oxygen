@@ -1,13 +1,16 @@
 import styled from 'styled-components';
 import BaseCard from '../base-card';
 
-export const CardContainer = styled.div`
+export const AspectRatio = styled.div`
   height: 0;
-  max-width: 420px;
-  min-width: 260px;
   padding-bottom: 73.68421053%;
   position: relative;
   width: 100%;
+`;
+
+export const CardContainer = styled.div`
+  max-width: 420px;
+  min-width: 260px;
 `;
 
 export const StyledPropertyCard = styled(BaseCard)`

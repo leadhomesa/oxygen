@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { select, text } from '@storybook/addon-knobs';
+import { select, text, number } from '@storybook/addon-knobs';
 import BaseCard from '../src/base-card';
 import PropertyCard from '../src/property-card';
 import CardFooter from '../src/card-footer/index';
@@ -43,9 +43,7 @@ storiesOf('Cards', module)
   .add('Property Card', () => (
     <div
       style={{
-        width: `${text('Container Width', '320')}px`,
-        maxWidth: '420px',
-        minWidth: '260px'
+        width: `${number('Container Width', '400')}px`
       }}
     >
       <PropertyCard
@@ -57,7 +55,7 @@ storiesOf('Cards', module)
           meta={<Meta />}
           price={text('Price', 'R599,000,00')}
           description={text(
-            'Price',
+            'Description',
             'This is a stunning home with beautiful views.'
           )}
         />

@@ -1,15 +1,18 @@
 import React from 'react';
-import { CardContainer, StyledPropertyCard } from './style';
+import { AspectRatio, CardContainer, StyledPropertyCard } from './style';
 import { PropTypes } from 'prop-types';
 
-const PropertyCard = ({ children, ...rest }) => (
-  <CardContainer>
-    <StyledPropertyCard {...rest}>{children}</StyledPropertyCard>
+const PropertyCard = ({ children, className, ...rest }) => (
+  <CardContainer className={className}>
+    <AspectRatio>
+      <StyledPropertyCard {...rest}>{children}</StyledPropertyCard>
+    </AspectRatio>
   </CardContainer>
 );
 
 PropertyCard.propTypes = {
   children: PropTypes.node,
+  className: PropTypes.string,
   href: PropTypes.string.isRequired
 };
 
