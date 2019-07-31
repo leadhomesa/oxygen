@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import { StyledHeader as Header, Step, Crumbs } from './style';
 
 const HeaderWithBreadcrumbs = ({ className, crumbs, activeIndex }) => {
-  console.log(activeIndex);
   return (
     <Header className={className}>
       <Crumbs>
