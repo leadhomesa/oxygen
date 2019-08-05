@@ -21,11 +21,19 @@ const Disabled = css`
 const SmallButton = css`
   height: 38px;
   padding: 0 12px;
+
+  > svg {
+    right: 12px;
+  }
 `;
 
 const LargeButton = css`
   height: 55px;
   padding: 0 24px;
+
+  > svg {
+    right: 24px;
+  }
 `;
 
 const PrimaryButton = css`
@@ -81,9 +89,9 @@ const ButtonStyle = css`
 
   ${({ variant }) => (variant !== 'text' ? BoxShadow : 'none')};
 
-  & > svg {
+  > svg {
     position: absolute;
-    right: 12px;
+    right: 16px;
     height: 20px;
     width: 20px;
   }
