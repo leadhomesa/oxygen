@@ -1,13 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { HeaderContainer } from './style';
-import { ReactComponent as LeadhomeLogo } from '../../assets/leadhome-logo.svg';
+import {
+  HeaderContainer,
+  LeadhomeLogo,
+  SmallLeadhomeLogo,
+  StyledLink
+} from './style';
 
 const Header = ({ logo: Logo, children, ...rest }) => (
   <HeaderContainer {...rest}>
     {Logo && <Logo />}
-    {!Logo && <LeadhomeLogo />}
+    {!Logo && (
+      <StyledLink to='/'>
+        <SmallLeadhomeLogo />
+        <LeadhomeLogo />
+      </StyledLink>
+    )}
     {children}
   </HeaderContainer>
 );

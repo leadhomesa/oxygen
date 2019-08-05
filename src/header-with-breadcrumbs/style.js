@@ -18,7 +18,6 @@ const getStepColor = (completed, active) => {
 };
 
 export const Crumbs = styled.div`
-  margin-left: 1rem;
   display: flex;
   align-items: center;
   height: 25px;
