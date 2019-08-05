@@ -64,7 +64,7 @@ class Input extends React.PureComponent {
     } = this.props;
 
     return (
-      <React.Fragment>
+      <div>
         <Container
           warning={showWarning(meta)}
           active={meta.active}
@@ -98,7 +98,7 @@ class Input extends React.PureComponent {
           )}
         </Container>
         {showError(meta) && <ErrorMessage>{meta.error}</ErrorMessage>}
-      </React.Fragment>
+      </div>
     );
   }
 }

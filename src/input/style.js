@@ -25,8 +25,8 @@ export const TextInput = styled.input`
   background: transparent;
 
   &::placeholder {
-    font-size: 14px;
-    color: ${colors.grey};
+    font-size: 15px;
+    color: ${colors.ghost};
   }
 
   ${({ disabled }) => disabled && TextInputDisabled};
@@ -49,10 +49,10 @@ const ContainerDisabled = css`
 
 export const Container = styled.div`
   border: ${({ noBorder }) => (noBorder ? 'none' : `1px solid ${colors.grey}`)};
-  box-shadow: ${({ noShadow }) =>
-    noShadow ? 'none' : 'inset 0 2px 4px 0 rgba(65,65,96,0.18)'};
   border-radius: 4px;
   display: flex;
+  box-shadow: inset 0 1px 1px 0 rgba(65, 65, 96, 0.18);
+  background-color: ${colors.white};
 
   flex-grow: ${({ flexGrow }) => flexGrow || '0'};
   ${({ active }) => active && ContainerActive};
