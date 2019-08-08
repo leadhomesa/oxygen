@@ -8,11 +8,11 @@ import {
   StyledLink
 } from './style';
 
-const Header = ({ logo: Logo, children, ...rest }) => (
+const Header = ({ logo: Logo, logoLink, children, ...rest }) => (
   <HeaderContainer {...rest}>
     {Logo && <Logo />}
     {!Logo && (
-      <StyledLink to='/'>
+      <StyledLink to={logoLink}>
         <SmallLeadhomeLogo />
         <LeadhomeLogo />
       </StyledLink>
@@ -21,8 +21,13 @@ const Header = ({ logo: Logo, children, ...rest }) => (
   </HeaderContainer>
 );
 
+Header.defaultProps = {
+  logoLink: '/'
+};
+
 Header.propTypes = {
   logo: PropTypes.func,
+  logoLink: PropTypes.string,
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.object])
 };
 

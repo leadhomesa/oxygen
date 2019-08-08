@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import Link from '../link';
 import colors from '../colors';
 
 const BoxShadow = css`
@@ -122,7 +123,7 @@ const ButtonStyle = css`
   }};
 `;
 
-export const StyledLinkButton = styled.a`
+export const StyledLinkButton = styled(Link)`
   ${ButtonStyle}
   text-decoration: none;
 `;
