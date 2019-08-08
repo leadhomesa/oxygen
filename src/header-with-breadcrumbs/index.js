@@ -3,9 +3,14 @@ import PropTypes from 'prop-types';
 
 import { StyledHeader as Header, Step, Crumbs } from './style';
 
-const HeaderWithBreadcrumbs = ({ className, crumbs, activeIndex }) => {
+const HeaderWithBreadcrumbs = ({
+  className,
+  crumbs,
+  activeIndex,
+  logoLink
+}) => {
   return (
-    <Header className={className}>
+    <Header className={className} logoLink={logoLink}>
       <Crumbs>
         {crumbs.map((crumb, index) => (
           <Step
@@ -23,13 +28,15 @@ const HeaderWithBreadcrumbs = ({ className, crumbs, activeIndex }) => {
 
 HeaderWithBreadcrumbs.defaultProps = {
   className: null,
-  activeIndex: 0
+  activeIndex: 0,
+  logoLink: '/'
 };
 
 HeaderWithBreadcrumbs.propTypes = {
   className: PropTypes.string,
   crumbs: PropTypes.arrayOf(PropTypes.string).isRequired,
-  activeIndex: PropTypes.number
+  activeIndex: PropTypes.number,
+  logoLink: PropTypes.string
 };
 
 export default HeaderWithBreadcrumbs;
