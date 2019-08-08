@@ -11,6 +11,7 @@ import Toast from './toast';
 import CardBody from './card-body';
 import CardFooter from './card-footer';
 import PropertyCard from './property-card';
+import Link from './link';
 
 export {
   Button,
@@ -26,5 +27,6 @@ export {
   Footer,
   AutoComplete,
   Toast,
-  PropertyCard
+  PropertyCard,
+  Link
 };

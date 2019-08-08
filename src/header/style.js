@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import colors from '../colors';
 
-import { Link } from 'react-router-dom';
+import Link from '../link';
 import { ReactComponent as LeadhomeSVG } from '../../assets/leadhome-logo.svg';
 import { ReactComponent as SmallLeadhomeSVG } from '../../assets/leadhome-logo-small.svg';
 
