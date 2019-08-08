@@ -12,7 +12,7 @@ const Header = ({ logo: Logo, logoLink, children, ...rest }) => (
   <HeaderContainer {...rest}>
     {Logo && <Logo />}
     {!Logo && (
-      <StyledLink to={logoLink}>
+      <StyledLink href={logoLink}>
         <SmallLeadhomeLogo />
         <LeadhomeLogo />
       </StyledLink>
