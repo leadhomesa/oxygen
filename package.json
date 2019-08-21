@@ -35,7 +35,7 @@
     "url": "https://github.com/leadhomesa/oxygen/issues"
   },
   "homepage": "https://github.com/leadhomesa/oxygen#readme",
-  "peerDepenencies": {
+  "peerDependencies": {
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
