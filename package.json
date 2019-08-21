@@ -1,6 +1,6 @@
 {
   "name": "@leadhome/oxygen",
-  "version": "0.6.7",
+  "version": "0.6.6",
   "description": "A react component library",
   "main": "build/oxygen.js",
   "module": "build/oxygen.js",
