@@ -12,6 +12,8 @@ import CardBody from './card-body';
 import CardFooter from './card-footer';
 import PropertyCard from './property-card';
 import Link from './link';
+import TextArea from './text-area';
+import Checkbox from './checkbox';
 
 export {
   Button,
@@ -28,5 +30,7 @@ export {
   AutoComplete,
   Toast,
   PropertyCard,
-  Link
+  Link,
+  TextArea,
+  Checkbox
 };
