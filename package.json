@@ -90,5 +90,8 @@
   },
   "release": {
     "branch": "next"
+  },
+  "dependencies": {
+    "deprecated-prop-type": "^1.0.0"
   }
 }
