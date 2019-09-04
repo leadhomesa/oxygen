@@ -1,20 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import deprecated from 'deprecated-prop-type';
 
-import {
-  HeaderContainer,
-  LeadhomeLogo,
-  SmallLeadhomeLogo,
-  StyledLink
-} from './style';
+import { HeaderContainer, StyledLink } from './style';
 
 const Header = ({ logo: Logo, logoLink, children, ...rest }) => (
   <HeaderContainer {...rest}>
-    {Logo && <Logo />}
-    {!Logo && (
+    {Logo && (
       <StyledLink href={logoLink}>
-        <SmallLeadhomeLogo />
-        <LeadhomeLogo />
+        <Logo />
       </StyledLink>
     )}
     {children}
@@ -26,7 +20,10 @@ Header.defaultProps = {
 };
 
 Header.propTypes = {
-  logo: PropTypes.func,
+  logo: deprecated(
+    PropTypes.func,
+    'The logo prop has been depcrecated. Please consider passing it in via children instead.'
+  ),
   logoLink: PropTypes.string,
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.object])
 };
