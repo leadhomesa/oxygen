@@ -1,20 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import {
-  HeaderContainer,
-  LeadhomeLogo,
-  SmallLeadhomeLogo,
-  StyledLink
-} from './style';
+import { HeaderContainer, StyledLink } from './style';
 
 const Header = ({ logo: Logo, logoLink, children, ...rest }) => (
   <HeaderContainer {...rest}>
-    {Logo && <Logo />}
-    {!Logo && (
+    {Logo && (
       <StyledLink href={logoLink}>
-        <SmallLeadhomeLogo />
-        <LeadhomeLogo />
+        <Logo />
       </StyledLink>
     )}
     {children}
