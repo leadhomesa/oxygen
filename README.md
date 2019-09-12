@@ -17,6 +17,10 @@ or
  yarn add @leadhome/oxygen
 ```
 
+## Commits
+- Use `npm commit`
+- https://github.com/commitizen/cz-cli
+
 ## Available Components
 
 - Header
