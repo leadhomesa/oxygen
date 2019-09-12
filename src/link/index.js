@@ -6,6 +6,7 @@ import { Link as ReactRouterLink } from 'react-router-dom';
 const linkRegex = /^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/;
 const Link = ({ children, href, ...rest }) => {
   const isExternal = linkRegex.test(href);
+
   const isLocalhost = href.includes('localhost');
 
   return (
