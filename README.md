@@ -18,7 +18,7 @@ or
 ```
 
 ## Commits
-- Use `npm commit`
+- Use `npm run commit`
 - https://github.com/commitizen/cz-cli
 
 ## Available Components
