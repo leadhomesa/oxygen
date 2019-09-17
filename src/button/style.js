@@ -71,7 +71,7 @@ const SuccessButton = css`
     variant !== 'text' ? `1px solid ${colors.ocean}` : 'none'};
 `;
 
-const ButtonStyle = css`
+export const ButtonStyle = css`
   border-radius: 4px;
   cursor: pointer;
   font-size: 15px;
@@ -84,6 +84,7 @@ const ButtonStyle = css`
   align-items: center;
   justify-content: center;
   position: relative;
+  text-decoration: none;
   transform: translateY(0);
   transition: transform 0.1s ease-out;
   max-width: 380px;
