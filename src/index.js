@@ -1,5 +1,6 @@
 import Button from './button/button';
 import LinkButton from './button/link-button';
+import { ButtonStyle } from './button/style';
 import Colors from './colors';
 import Input, { Currency as InputCurrency } from './input';
 import Dropdown from './dropdown';
@@ -17,6 +18,7 @@ import Checkbox from './checkbox';
 
 export {
   Button,
+  ButtonStyle,
   LinkButton,
   CardBody,
   CardFooter,
