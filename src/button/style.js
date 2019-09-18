@@ -98,6 +98,25 @@ export const ButtonStyle = css`
     width: 20px;
   }
 
+  &:hover {
+    text-decoration: none;
+
+    ${({ color }) => {
+    /* eslint-disable */
+      switch (color) {
+        case 'secondary':
+          return SecondaryButton;
+        case 'warning':
+          return WarningButton;
+        case 'success':
+          return SuccessButton;
+        case 'primary':
+        default:
+          return PrimaryButton;
+      }
+    }} /* eslint-enable */
+  }
+
   ${({ disabled }) => disabled && Disabled};
 
   ${({ size }) => {
