@@ -3,8 +3,6 @@ import { storiesOf } from '@storybook/react';
 import { boolean, select, text } from '@storybook/addon-knobs';
 import { Button, LinkButton } from '../src';
 
-import { FiveHundredPx } from 'styled-icons/boxicons-logos/FiveHundredPx';
-
 const buttonSizes = {
   Small: 'sm',
   Medium: 'md',
@@ -42,7 +40,6 @@ storiesOf('Buttons', module)
       }}
       size={select('Size', buttonSizes, 'md')}
       variant={select('Variant', buttonVariants, 'flat')}
-      style={{ width: 400 }}
     >
       {text('Label', 'Hello Button')}
       <FiveHundredPx />
