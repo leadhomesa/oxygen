@@ -42,7 +42,6 @@ storiesOf('Buttons', module)
       variant={select('Variant', buttonVariants, 'flat')}
     >
       {text('Label', 'Hello Button')}
-      <FiveHundredPx />
     </Button>
   ))
   .add('Link Button', () => (
