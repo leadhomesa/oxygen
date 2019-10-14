@@ -94,7 +94,7 @@ export const ButtonStyle = css`
   > svg {
     position: absolute;
     right: 16px;
-    top: calc(50% - 20px);
+    top: calc(50% - 10px);
     height: 20px;
     width: 20px;
   }
