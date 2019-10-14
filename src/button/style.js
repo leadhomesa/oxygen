@@ -42,7 +42,7 @@ const PrimaryButton = css`
   background-color: ${({ variant }) =>
     variant === 'flat' ? colors.coral : 'transparent'};
   border: ${({ variant }) =>
-    variant !== 'text' ? `1px solid ${colors.coral}` : 'none'};
+    variant === 'outline' ? `1px solid ${colors.lighterStorm}` : 'none'};
 `;
 
 const SecondaryButton = css`
