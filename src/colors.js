@@ -2,12 +2,14 @@ export default {
   black: '#000000',
   white: '#FFFFFF',
 
+  coral: '#FF6A70',
   coral1: '#FD4B51',
   coral2: '#FF6A70',
   coral3: '#FF999C',
   coral4: '#FFC2C4',
   coral5: '#FFEBEB',
 
+  ocean: '#4DB3BF',
   ocean1: '#398891',
   ocean2: '#4DB3BF',
   ocean3: '#87CCD4',
@@ -15,18 +17,21 @@ export default {
   ocean5: '#E3F9FC',
   ocean6: '#F1FCFD',
 
+  storm: '#51516F',
   storm1: '#414160',
   storm2: '#51516F',
   storm3: '#6D6D90',
   storm4: '#C5C8D3',
   storm5: '#F1F1F4',
 
+  overcast: '#9494BE',
   overcast1: '#6C6E9E',
   overcast2: '#9494BE',
   overcast3: '#D1D1E8',
   overcast4: '#E9E9FA',
   overcast5: '#F9F9FF',
 
+  sky: '#64B5F3',
   sky1: '#3E91D1',
   sky2: '#64B5F3',
   sky3: '#87C6F7',
@@ -34,6 +39,7 @@ export default {
   sky5: '#ECF6FE',
   sky6: '#F4F9FC',
 
+  eggplant: '#B282D4',
   eggplant1: '#925FB7',
   eggplant2: '#B282D4',
   eggplant3: '#C59EE1',
@@ -41,6 +47,7 @@ export default {
   eggplant5: '#F6F1FA',
   eggplant6: '#FAF8FC',
 
+  warning: '#F8B24B',
   warning1: '#ED981A',
   warning2: '#F8B24B',
   warning3: '#FFCA7B',
