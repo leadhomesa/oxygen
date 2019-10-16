@@ -53,16 +53,4 @@ export default {
   warning3: '#FFCA7B',
   warning4: '#FFDDAA',
   warning5: '#FFF2DE',
-
-  gallery: '#F9F9FF',
-  lightGallery: '#E9E9FA',
-
-  disabled: '#a9a9bb',
-  grey: '#d2d2e4',
-  lightgrey: '#fafafa',
-  darkbg: '#f0f0f8',
-
-  monteCarlo: '#87ccd4',
-  paradiso: '#398891',
-  ghost: '#C9C9D1'
 };
