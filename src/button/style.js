@@ -19,56 +19,35 @@ const Disabled = css`
   cursor: not-allowed;
 `;
 
-const SmallButton = css`
-  height: 38px;
-  padding: 0 12px;
-
-  > svg {
-    right: 12px;
-  }
+const Svg = css`
+  right: ${({ size }) =>
+    size === 'sm' ? '12px' : size === 'lg' ? '24px' : '16px'};
 `;
 
-const LargeButton = css`
-  height: 55px;
-  padding: 0 24px;
-
-  > svg {
-    right: 24px;
-  }
+const ButtonHover = css`
+  color: ${({ variant, color }) =>
+    variant === 'flat' || variant === 'shadow'
+      ? colors.white
+      : getHoverColor(color)};
+  background-color: ${({ variant, color }) =>
+    variant === 'flat' || variant === 'shadow'
+      ? getHoverColor(color)
+      : 'transparent'};
+  border: ${({ variant, color }) =>
+    variant === 'outlined' ? `1px solid ${getHoverColor(color)}` : 'none'};
 `;
 
-const PrimaryButton = css`
-  color: ${({ variant }) => (variant === 'flat' ? colors.white : colors.coral)};
-  background-color: ${({ variant }) =>
-    variant === 'flat' ? colors.coral : 'transparent'};
-  border: ${({ variant }) =>
-    variant === 'outline' ? `1px solid ${colors.lighterStorm}` : 'none'};
-`;
-
-const SecondaryButton = css`
-  color: ${({ variant }) =>
-    variant === 'flat' ? colors.white : colors.lighterStorm};
-  background-color: ${({ variant }) =>
-    variant === 'flat' ? colors.lighterStorm : 'transparent'};
-  border: ${({ variant }) =>
-    variant !== 'text' ? `1px solid ${colors.lighterStorm}` : 'none'};
-`;
-
-const WarningButton = css`
-  color: ${({ variant }) =>
-    variant === 'flat' ? colors.white : colors.warning};
-  background-color: ${({ variant }) =>
-    variant === 'flat' ? colors.warning : 'transparent'};
-  border: ${({ variant }) =>
-    variant !== 'text' ? `1px solid ${colors.warning}` : 'none'};
-`;
-
-const SuccessButton = css`
-  color: ${({ variant }) => (variant === 'flat' ? colors.white : colors.ocean)};
-  background-color: ${({ variant }) =>
-    variant === 'flat' ? colors.ocean : 'transparent'};
-  border: ${({ variant }) =>
-    variant !== 'text' ? `1px solid ${colors.ocean}` : 'none'};
+const ButtonActive = css`
+  color: ${({ variant, color }) =>
+    variant === 'flat' || variant === 'shadow'
+      ? colors.white
+      : getActiveColor(color)};
+  background-color: ${({ variant, color }) =>
+    variant === 'flat' || variant === 'shadow'
+      ? getActiveColor(color)
+      : 'transparent'};
+  border: ${({ variant, color }) =>
+    variant === 'outlined' ? `1px solid ${getActiveColor(color)}` : 'none'};
 `;
 
 export const ButtonStyle = css`
@@ -89,7 +68,9 @@ export const ButtonStyle = css`
   transition: transform 0.1s ease-out;
   max-width: 380px;
 
-  ${({ variant }) => (variant !== 'text' ? BoxShadow : 'none')};
+  &:hover {
+    text-decoration: none;
+  }
 
   > svg {
     position: absolute;
@@ -98,50 +79,6 @@ export const ButtonStyle = css`
     height: 20px;
     width: 20px;
   }
-
-  &:hover {
-    text-decoration: none;
-
-    ${({ color }) => {
-    /* eslint-disable */
-      switch (color) {
-        case 'secondary':
-          return SecondaryButton;
-        case 'warning':
-          return WarningButton;
-        case 'success':
-          return SuccessButton;
-        case 'primary':
-        default:
-          return PrimaryButton;
-      }
-    }} /* eslint-enable */
-  }
-
-  ${({ disabled }) => disabled && Disabled};
-
-  ${({ size }) => {
-    switch (size) {
-      case 'sm':
-        return SmallButton;
-      case 'lg':
-        return LargeButton;
-    }
-  }};
-
-  ${({ color }) => {
-    switch (color) {
-      case 'secondary':
-        return SecondaryButton;
-      case 'warning':
-        return WarningButton;
-      case 'success':
-        return SuccessButton;
-      case 'primary':
-      default:
-        return PrimaryButton;
-    }
-  }};
 `;
 
 export const StyledLinkButton = styled(Link)`
@@ -151,4 +88,74 @@ export const StyledLinkButton = styled(Link)`
 
 export const StyledButton = styled.button`
   ${ButtonStyle}
+  color: ${({ variant, color }) =>
+    variant === 'flat' || variant === 'shadow'
+      ? colors.white
+      : getColor(color)};
+  background-color: ${({ variant, color }) =>
+    variant === 'flat' || variant === 'shadow'
+      ? getColor(color)
+      : 'transparent'};
+  border: ${({ variant, color }) =>
+    variant === 'outlined' ? `1px solid ${getColor(color)}` : 'none'};
+  height: ${({ size }) =>
+    size === 'sm' ? '38px' : size === 'lg' ? '55px' : '44px'};
+  padding: ${({ size }) =>
+    size === 'sm' ? '0 12px' : size === 'lg' ? '0 25px' : '0 16px'};
+  ${({ variant }) => variant === 'shadow' && BoxShadow}
+  ${({ disabled }) => disabled && Disabled}
+
+  &:hover {
+    ${({ disabled }) => !disabled && ButtonHover}
+  }
+
+  &:active {
+    ${({ disabled }) => !disabled && ButtonActive}
+  }
+
+  > svg {
+    ${Svg}
+  }
 `;
+
+const getColor = colorScheme => {
+  switch (colorScheme) {
+    case 'secondary':
+      return colors.storm;
+    case 'warning':
+      return colors.warning;
+    case 'success':
+      return colors.ocean;
+    case 'primary':
+    default:
+      return colors.coral;
+  }
+};
+
+const getHoverColor = colorScheme => {
+  switch (colorScheme) {
+    case 'secondary':
+      return colors.lightStorm;
+    case 'warning':
+      return colors.lightWarning;
+    case 'success':
+      return colors.lightOcean;
+    case 'primary':
+    default:
+      return colors.lightCoral;
+  }
+};
+
+const getActiveColor = colorScheme => {
+  switch (colorScheme) {
+    case 'secondary':
+      return colors.darkStorm;
+    case 'warning':
+      return colors.darkWarning;
+    case 'success':
+      return colors.darkOcean;
+    case 'primary':
+    default:
+      return colors.darkCoral;
+  }
+};

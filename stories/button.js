@@ -26,7 +26,8 @@ const buttonTargets = {
 const buttonVariants = {
   Flat: 'flat',
   Outlined: 'outlined',
-  Text: 'text'
+  Text: 'text',
+  Shadow: 'shadow'
 };
 
 storiesOf('Buttons', module)
