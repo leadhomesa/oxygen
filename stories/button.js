@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { boolean, select, text } from '@storybook/addon-knobs';
 import { Button, LinkButton } from '../src';
-import { ArrowForward } from 'styled-icons/material';
+import { Menu } from 'styled-icons/material';
 
 const buttonSizes = {
   Small: 'sm',
@@ -31,6 +31,11 @@ const buttonVariants = {
   Shadow: 'shadow'
 };
 
+const iconPlacements = {
+  Right: 'right',
+  Left: 'left'
+};
+
 storiesOf('Buttons', module)
   .add('Button', () => (
     <Button
@@ -42,7 +47,8 @@ storiesOf('Buttons', module)
       }}
       size={select('Size', buttonSizes, 'md')}
       variant={select('Variant', buttonVariants, 'flat')}
-      icon={<ArrowForward />}
+      icon={<Menu />}
+      iconPlacement={select('Icon Placement', iconPlacements, 'right')}
     >
       {text('Label', 'Hello Button')}
     </Button>
