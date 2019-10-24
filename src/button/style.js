@@ -24,6 +24,11 @@ const Svg = css`
     size === 'sm' ? '12px' : size === 'lg' ? '24px' : '16px'};
 `;
 
+const IconPadding = css`
+  padding-right: ${({ size }) =>
+    size === 'sm' ? '32px' : size === 'lg' ? '44px' : '36px'};
+`;
+
 const ButtonHover = css`
   color: ${({ variant, color }) =>
     variant === 'flat' || variant === 'shadow'
@@ -101,7 +106,8 @@ export const StyledButton = styled.button`
   height: ${({ size }) =>
     size === 'sm' ? '38px' : size === 'lg' ? '55px' : '44px'};
   padding: ${({ size }) =>
-    size === 'sm' ? '0 12px' : size === 'lg' ? '0 25px' : '0 16px'};
+    size === 'sm' ? '0 12px' : size === 'lg' ? '0 24px' : '0 16px'};
+  ${({ icon }) => !!icon && IconPadding}
   ${({ variant }) => variant === 'shadow' && BoxShadow}
   ${({ disabled }) => disabled && Disabled}
 

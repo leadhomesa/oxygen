@@ -2,6 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { boolean, select, text } from '@storybook/addon-knobs';
 import { Button, LinkButton } from '../src';
+import { ArrowForward } from 'styled-icons/material';
 
 const buttonSizes = {
   Small: 'sm',
@@ -41,6 +42,7 @@ storiesOf('Buttons', module)
       }}
       size={select('Size', buttonSizes, 'md')}
       variant={select('Variant', buttonVariants, 'flat')}
+      icon={<ArrowForward />}
     >
       {text('Label', 'Hello Button')}
     </Button>
