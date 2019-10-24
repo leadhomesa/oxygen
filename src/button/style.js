@@ -132,28 +132,30 @@ const getColor = colorScheme => {
   }
 };
 
+// TODO: change all of these to a light versions of the color once complete color set is available
 const getHoverColor = colorScheme => {
   switch (colorScheme) {
     case 'secondary':
       return colors.lightStorm;
     case 'warning':
-      return colors.lightWarning;
+      return colors.warning;
     case 'success':
       return colors.lightOcean;
     case 'primary':
     default:
-      return colors.lightCoral;
+      return colors.coral;
   }
 };
 
+// TODO: change all of these to a darker versions of the color once complete color set is available
 const getActiveColor = colorScheme => {
   switch (colorScheme) {
     case 'secondary':
       return colors.darkStorm;
     case 'warning':
-      return colors.darkWarning;
+      return colors.warning;
     case 'success':
-      return colors.darkOcean;
+      return colors.ocean;
     case 'primary':
     default:
       return colors.darkCoral;
