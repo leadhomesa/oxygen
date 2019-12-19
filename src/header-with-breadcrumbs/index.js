@@ -7,10 +7,12 @@ const HeaderWithBreadcrumbs = ({
   className,
   crumbs,
   activeIndex,
-  logoLink
+  logoLink,
+  children
 }) => {
   return (
     <Header className={className} logoLink={logoLink}>
+      {children}
       <Crumbs>
         {crumbs.map((crumb, index) => (
           <Step
@@ -36,7 +38,8 @@ HeaderWithBreadcrumbs.propTypes = {
   className: PropTypes.string,
   crumbs: PropTypes.arrayOf(PropTypes.string).isRequired,
   activeIndex: PropTypes.number,
-  logoLink: PropTypes.string
+  logoLink: PropTypes.string,
+  children: PropTypes.node
 };
 
 export default HeaderWithBreadcrumbs;

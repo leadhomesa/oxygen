@@ -21,7 +21,7 @@ class Input extends React.PureComponent {
     showWarning: meta => meta.error && meta.touched
   };
 
-  onChange = e => {
+  handleChange = e => {
     const {
       input: { onChange }
     } = this.props;
@@ -82,7 +82,7 @@ class Input extends React.PureComponent {
             readOnly={readOnly}
             {...input}
             {...rest}
-            onChange={this.onChange}
+            onChange={this.handleChange}
           />
 
           {Affix && (
