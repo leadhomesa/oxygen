@@ -90,7 +90,7 @@ const AutoComplete = ({
       if (keyCode === 13 || keyCode === 9) addToList(keyCode);
       if (keyCode === 38 || keyCode === 40) changeSelectedIndex(keyCode);
       if (keyCode === 8 && list.length > 0 && query === '') {
-        let tmpList = [...list];
+        const tmpList = [...list];
         tmpList.splice(-1, 1);
         setList(tmpList);
         changeFormValue(tmpList);
@@ -100,7 +100,7 @@ const AutoComplete = ({
 
   const removeItem = position => () => {
     const { onChange: changeFormValue } = input;
-    let newList = [...list].filter((item, index) => index !== position);
+    const newList = [...list].filter((item, index) => index !== position);
     setList(newList);
     changeFormValue(newList);
     if (inputEl.current) inputEl.current.focus();
