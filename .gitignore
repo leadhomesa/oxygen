@@ -1,11 +1,8 @@
-# Add any directories, files, or patterns you don't want to be tracked by version control
 node_modules/
-.DS_Store
-.vscode
-.env
-.cache
-.idea/
-examples/
-dist/
 build/
-lib/
+
+# We can ignore archives, we will be creating one shortly:
+*.tgz
+
+.vscode
+.idea
