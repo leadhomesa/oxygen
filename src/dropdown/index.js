@@ -42,9 +42,11 @@ const Dropdown = ({ options, input, ...rest }) => {
 };
 
 Dropdown.propTypes = {
-  options: PropTypes.shape({
-    [name]: PropTypes.string
-  }).isRequired,
+  // This totally breaks react - [name] is undefined
+  // options: PropTypes.shape({
+  //   [name]: PropTypes.string
+  // }).isRequired,
+  options: PropTypes.object,
   input: PropTypes.shape({
     name: PropTypes.string,
     onBlur: PropTypes.func,
