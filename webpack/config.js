@@ -9,7 +9,8 @@ module.exports = {
     filename: 'oxygen.js',
     library: '@leadhome/oxygen',
     libraryTarget: 'umd',
-    umdNamedDefine: true
+    umdNamedDefine: true,
+    globalObject: 'this'
   },
   module: {
     rules: [
