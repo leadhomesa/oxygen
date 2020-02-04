@@ -46,6 +46,7 @@ Dropdown.propTypes = {
   // options: PropTypes.shape({
   //   [name]: PropTypes.string
   // }).isRequired,
+
   options: PropTypes.object,
   input: PropTypes.shape({
     name: PropTypes.string,
