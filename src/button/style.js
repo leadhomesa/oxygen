@@ -1,6 +1,5 @@
-import styled, { css } from 'styled-components';
-import Link from '../link';
-import colors from '../colors';
+import styled, { css } from "styled-components";
+import colors from "../colors";
 
 const BoxShadow = css`
   box-shadow: 0 9px 7px 0 rgba(0, 0, 0, 0.06), 0 3px 4px 0 rgba(0, 0, 0, 0.15);
@@ -38,37 +37,37 @@ const LargeButton = css`
 `;
 
 const PrimaryButton = css`
-  color: ${({ variant }) => (variant === 'flat' ? colors.white : colors.coral)};
+  color: ${({ variant }) => (variant === "flat" ? colors.white : colors.coral)};
   background-color: ${({ variant }) =>
-    variant === 'flat' ? colors.coral : 'transparent'};
+    variant === "flat" ? colors.coral : "transparent"};
   border: ${({ variant }) =>
-    variant === 'outline' ? `1px solid ${colors.lighterStorm}` : 'none'};
+    variant === "outline" ? `1px solid ${colors.lighterStorm}` : "none"};
 `;
 
 const SecondaryButton = css`
   color: ${({ variant }) =>
-    variant === 'flat' ? colors.white : colors.lighterStorm};
+    variant === "flat" ? colors.white : colors.lighterStorm};
   background-color: ${({ variant }) =>
-    variant === 'flat' ? colors.lighterStorm : 'transparent'};
+    variant === "flat" ? colors.lighterStorm : "transparent"};
   border: ${({ variant }) =>
-    variant !== 'text' ? `1px solid ${colors.lighterStorm}` : 'none'};
+    variant !== "text" ? `1px solid ${colors.lighterStorm}` : "none"};
 `;
 
 const WarningButton = css`
   color: ${({ variant }) =>
-    variant === 'flat' ? colors.white : colors.warning};
+    variant === "flat" ? colors.white : colors.warning};
   background-color: ${({ variant }) =>
-    variant === 'flat' ? colors.warning : 'transparent'};
+    variant === "flat" ? colors.warning : "transparent"};
   border: ${({ variant }) =>
-    variant !== 'text' ? `1px solid ${colors.warning}` : 'none'};
+    variant !== "text" ? `1px solid ${colors.warning}` : "none"};
 `;
 
 const SuccessButton = css`
-  color: ${({ variant }) => (variant === 'flat' ? colors.white : colors.ocean)};
+  color: ${({ variant }) => (variant === "flat" ? colors.white : colors.ocean)};
   background-color: ${({ variant }) =>
-    variant === 'flat' ? colors.ocean : 'transparent'};
+    variant === "flat" ? colors.ocean : "transparent"};
   border: ${({ variant }) =>
-    variant !== 'text' ? `1px solid ${colors.ocean}` : 'none'};
+    variant !== "text" ? `1px solid ${colors.ocean}` : "none"};
 `;
 
 export const ButtonStyle = css`
@@ -89,7 +88,7 @@ export const ButtonStyle = css`
   transition: transform 0.1s ease-out;
   max-width: 380px;
 
-  ${({ variant }) => (variant !== 'text' ? BoxShadow : 'none')};
+  ${({ variant }) => (variant !== "text" ? BoxShadow : "none")};
 
   > svg {
     position: absolute;
@@ -103,15 +102,15 @@ export const ButtonStyle = css`
     text-decoration: none;
 
     ${({ color }) => {
-    /* eslint-disable */
+      /* eslint-disable */
       switch (color) {
-        case 'secondary':
+        case "secondary":
           return SecondaryButton;
-        case 'warning':
+        case "warning":
           return WarningButton;
-        case 'success':
+        case "success":
           return SuccessButton;
-        case 'primary':
+        case "primary":
         default:
           return PrimaryButton;
       }
@@ -122,33 +121,28 @@ export const ButtonStyle = css`
 
   ${({ size }) => {
     switch (size) {
-      case 'sm':
+      case "sm":
         return SmallButton;
-      case 'lg':
+      case "lg":
         return LargeButton;
     }
   }};
 
   ${({ color }) => {
     switch (color) {
-      case 'secondary':
+      case "secondary":
         return SecondaryButton;
-      case 'warning':
+      case "warning":
         return WarningButton;
-      case 'success':
+      case "success":
         return SuccessButton;
-      case 'primary':
+      case "primary":
       default:
         return PrimaryButton;
     }
   }};
 `;
 
-export const StyledLinkButton = styled(Link)`
-  ${ButtonStyle}
-  text-decoration: none;
-`;
-
-export const StyledButton = styled.button`
+export const StyledButton = styled.a`
   ${ButtonStyle}
 `;
