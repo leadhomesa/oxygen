@@ -21,6 +21,12 @@ or
 - Use `npm commit`
 - https://github.com/commitizen/cz-cli
 
+## Branching
+
+Please branch off `master` with feature branches
+
+PRs should go into `master` first, and only then (when you want to release) into the `next` branch (which is, as the name implies, the future version).
+
 ## Available Components
 
 - Header
