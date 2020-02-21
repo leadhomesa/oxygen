@@ -26,5 +26,7 @@ export default {
 
   monteCarlo: '#87ccd4',
   paradiso: '#398891',
-  ghost: '#C9C9D1'
+  ghost: '#C9C9D1',
+
+  starfish: '#ED981A'
 };
